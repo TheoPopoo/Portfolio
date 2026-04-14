@@ -2,7 +2,7 @@ import { PortfolioData } from './types';
 
 export const portfolioData: PortfolioData = {
   "personal": {
-    "name": "Abderrazak Seghir",
+    "name": "Poletto Théo",
     "title": "Développeur Full Stack",
     "status": "Étudiant en Master 2 MIAGE-SID",
     "objective": "Recherche un poste en CDI pour mettre en valeur mes compétences et apprendre de nouvelles technologies",
