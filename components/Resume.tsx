@@ -14,7 +14,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/resume.pdf';
-    link.download = 'CV_Abderrazak_Seghir_Developpeur_Full_Stack.pdf';
+    link.download = 'CV_Theo_Poletto_Developpeur_Full_Stack.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -74,15 +74,15 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
             <div>
               {/* QR Code Section -> Made Clickable */}
               <div className="flex flex-col items-center mb-4">
-                <a href="https://seghir-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-xl mb-2 hover:shadow-md transition-shadow block cursor-pointer border border-slate-200">
+                <a href="https://poletto-theo.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-xl mb-2 hover:shadow-md transition-shadow block cursor-pointer border border-slate-200">
                   <img 
-                    src={`https://api.qrserver.com/v1/create-qr-code/?size=55x55&data=https://seghir-portfolio.vercel.app&bgcolor=ffffff&color=0f172a`}
+                    src={`https://api.qrserver.com/v1/create-qr-code/?size=55x55&data=https://poletto-theo.vercel.app/&bgcolor=ffffff&color=0f172a`}
                     alt="QR Code Portfolio"
                     className="w-[55px] h-[55px]"
                   />
                 </a>
-                <a href="https://seghir-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-600 hover:text-slate-900 font-medium tracking-wide">
-                  seghir-portfolio.vercel.app
+                <a href="https://poletto-theo.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-600 hover:text-slate-900 font-medium tracking-wide">
+                  poletto-theo.vercel.app
                 </a>
               </div>
 
@@ -95,8 +95,8 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                     className="relative w-full h-full object-cover rounded-full"
                   />
                 </div>
-                <h1 className="text-[22px] font-extrabold tracking-tight leading-tight text-slate-900 mb-1">Abderrazak Seghir</h1>
-                <p className="text-primary-600 font-semibold text-[13px] uppercase tracking-widest mt-1">Développeur Full Stack</p>
+                <h1 className="text-[22px] font-extrabold tracking-tight leading-tight text-slate-900 mb-1">Theo Poletto</h1>
+                <p className="text-primary-600 font-semibold text-[13px] uppercase tracking-widest mt-1">{data.personal.title}</p>
               </div>
 
               <div className="space-y-6">
@@ -122,7 +122,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                     </li>
                     <li className="flex items-center text-[10.5px] text-slate-700 gap-2.5">
                       <Linkedin size={13} className="text-primary-600 shrink-0" />
-                      <a href="https://www.linkedin.com/in/seghir-poletto-248520229/" target="_blank" rel="noopener noreferrer" className="text-primary-700 font-medium hover:underline">
+                      <a href="https://www.linkedin.com/in/theo-poletto/" target="_blank" rel="noopener noreferrer" className="text-primary-700 font-medium hover:underline">
                         THEO POLETTO
                       </a>
                     </li>
@@ -168,16 +168,19 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                 )}
 
                 {/* Centres d'intérêt */}
+                {data.hobbies && data.hobbies.length > 0 && (
                 <section>
                   <h3 className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-2 border-b border-slate-300 pb-1.5">Centres d'intérêt</h3>
                   <div className="flex flex-wrap gap-2 text-[10px] text-slate-700 font-medium">
-                    <span className="flex items-center gap-1"><Footprints size={11} className="text-primary-600" /> Course à pieds</span>
-                    <span className="text-slate-300">•</span>
-                    <span className="flex items-center gap-1"><Waves size={11} className="text-primary-600" /> Natation</span>
-                    <span className="text-slate-300">•</span>
-                    <span className="flex items-center gap-1"><Car size={11} className="text-primary-600" /> Mécanique</span>
+                    {data.hobbies.map((hobby, i) => (
+                      <React.Fragment key={i}>
+                        <span>{hobby}</span>
+                        {i < data.hobbies.length - 1 && <span className="text-slate-300">•</span>}
+                      </React.Fragment>
+                    ))}
                   </div>
                 </section>
+                )}
               </div>
             </div>
             
@@ -192,7 +195,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
             <div className="mb-4 p-2 bg-primary-50/80 border border-primary-100 rounded-xl">
               <p className="flex items-center justify-center text-[11px] font-bold text-primary-700 uppercase tracking-widest">
                 <Target size={14} className="mr-2 text-primary-600" />
-                Recherche de CDI - Septembre 2026
+                {data.personal.status}
               </p>
             </div>
 
@@ -205,7 +208,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                 Profil & Objectif
               </h3>
               <p className="text-[#333333] leading-[1.6] text-[10.5px] border-l-[3px] border-primary-300 pl-3 py-1 font-medium">
-                "Actuellement en dernière année de Master 2 MIAGE spécialité SID, je recherche un poste en CDI pour appliquer mes compétences et continuer à apprendre. J'ai une expérience en gestion de projets, et je prépare le certificat AWS Certified Cloud Practitioner (CLF-C02)."
+                "{data.personal.objective}"
               </p>
             </section>
 

@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#" className="text-xl font-bold tracking-tighter text-slate-900 z-50">
-          Abderrazak<span className="text-primary-600">.</span>
+          Theo<span className="text-primary-600">.</span>
         </a>
 
         {/* Desktop Nav */}
