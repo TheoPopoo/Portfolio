@@ -1,104 +1,176 @@
-# [cite_start]Théo Poletto — Administrateur Système, Réseau & Développeur [cite: 1, 2, 15]
+# Theo Poletto — Administrateur Systèmes & Réseaux / Développeur
 
-\<div align="center"\>
+<div align="center">
 
-**Administrateur Système & Réseau | Passionné de Cybersécurité | [cite_start]En recherche d'opportunités** [cite: 2, 12, 13]
+**Systèmes • Réseaux • Automatisation • Cybersécurité**
 
-[cite_start][Portfolio](https://poletto-theo.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/theo-poletto/) · [Email](mailto:theopoleto54@gmail.com) [cite: 8]
+[Portfolio](https://poletto-theo.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/theo-poletto/)
 
-\</div\>
+</div>
+
+---
 
 ## À propos
 
-[cite_start]Titulaire d'un BTS SNIR spécialisé en développement d'applications et installations réseaux [cite: 11][cite_start], je suis passionné par l'informatique et plus particulièrement par le domaine de la cybersécurité[cite: 12]. [cite_start]Autonome, persévérant et doté d'une grande capacité d'adaptation [cite: 4, 6][cite_start], je recherche activement une entreprise pour mettre en pratique mes compétences acquises et continuer à en développer de nouvelles[cite: 13].
+Administrateur Systèmes & Réseaux avec une forte appétence pour la **cybersécurité** et l’**automatisation**, je conçois et maintiens des infrastructures fiables, sécurisées et optimisées.
+
+Grâce à mon expérience en entreprise, je combine **administration système**, **réseau**, et **développement d’outils internes** pour améliorer la performance et la gestion des environnements IT.
+
+---
 
 ## Compétences
 
-  - [cite_start]**Réseaux** : Adressage IP, LAN/WLAN, DHCP, DNS, VLAN, Routage, Cisco (Routeur, Switch) [cite: 52, 53, 54, 55, 56, 57, 63, 64]
-  - [cite_start]**Systèmes & Virtualisation** : Windows, Linux, Hyper-V, VMware, Proxmox, Docker [cite: 59, 60, 61, 66, 67, 79]
-  - [cite_start]**Développement & Automatisation** : C\#, SQL Server, Blazor, PowerShell [cite: 20, 21]
-  - [cite_start]**Supervision & Cybersécurité** : Zabbix, Grafana, Promtail, Security Onion, gestion des accès, patch management [cite: 18, 24, 78]
+### 🔧 Systèmes & Réseaux
+
+* Windows Server, Linux
+* Active Directory, SCCM
+* VLAN, NAT, DHCP, DNS, routage
+* Hyper-V, VMware, Proxmox
+* NAS & sauvegardes
+
+### ⚙️ Automatisation & Dev
+
+* PowerShell (WinRM, déploiement, mises à jour)
+* C#, .NET, Blazor
+* SQL Server
+* Scripts d’administration & outils internes
+
+### 🐳 Conteneurs & Infra
+
+* Docker (dnsmasq, Bitwarden, Homebridge)
+* Virtualisation avancée
+* Déploiement de services réseau
+
+### 🔐 Cybersécurité & Supervision
+
+* Zabbix, Grafana, Promtail
+* Security Onion (SIEM)
+* Gestion des accès & patch management
+* Supervision et alerting
+
+### 📡 Télécom & VoIP
+
+* AVAYA, OXE / PABX
+* Asterisk, 3CX
+
+---
 
 ## Expérience
 
-### [cite_start]Administrateur Système Réseaux & Développeur [cite: 15]
+### Administrateur Systèmes & Réseaux / Développeur
 
-[cite_start]**Afludia** · *Depuis octobre 2024* [cite: 16]
+**Afludia** · *Depuis octobre 2024*
 
-  - [cite_start]Administration systèmes et réseaux (Hyper-V, NAS, VLAN, TRUNK, NAT) et supervision (Zabbix)[cite: 18].
-  - [cite_start]Gestion de la téléphonie VoIP (AVAYA, OXE/PABX, Asterisk)[cite: 19].
-  - [cite_start]Développement d'outils métier en C\#, SQL Server et interfaces web en Blazor[cite: 20, 21].
-  - [cite_start]Déploiement et configuration Docker et virtualisation avancée (VMware, Proxmox, Hyper-V)[cite: 22].
-  - [cite_start]Maintien en condition de sécurité du parc informatique et déploiement de bots (Teams) pour l'automatisation[cite: 23, 24].
+* Développement d’outils internes (C#, SQL Server)
+* Automatisation via PowerShell (WinRM, déploiement, updates)
+* Création d’une interface web en Blazor pour administration centralisée
+* Mise en place de supervision (Zabbix, Grafana)
+* Gestion d’infrastructures virtualisées et conteneurisées
 
-### [cite_start]Administrateur Système [cite: 25]
+---
 
-[cite_start]**ArcelorMittal** · *Juin 2024 – Septembre 2024* [cite: 26]
+### Administrateur Système
 
-  - [cite_start]Déploiement d'infrastructures sur site en environnement industriel et gestion des incidents[cite: 28, 29].
-  - [cite_start]Virtualisation de serveurs (MDT, Hyper-V) et administration Microsoft (Active Directory, System Center)[cite: 28, 30].
-  - [cite_start]Supervision des infrastructures[cite: 31].
+**ArcelorMittal** · *Juin 2024 – Septembre 2024*
 
-### [cite_start]Technicien Systèmes et Réseaux [cite: 32]
+* Déploiement de serveurs physiques et virtuels
+* Administration Active Directory & System Center
+* Supervision d’infrastructure industrielle
+* Gestion des incidents et support
 
-[cite_start]**Röchling** · *Juillet 2023* [cite: 33]
+---
 
-  - [cite_start]Support technique sur une solution téléphonique innovante (3CX) et gestion des tickets[cite: 34, 35].
-  - [cite_start]Mise en place de nouveaux postes de travail via SCCM et tâches de câblage[cite: 35, 36].
+### Technicien Systèmes & Réseaux
 
-### [cite_start]Administrateur Réseau [cite: 37]
+**Röchling** · *Juillet 2023*
 
-[cite_start]**Aftral** · *Octobre 2022 – Février 2023* [cite: 38]
+* Support technique et gestion de tickets
+* Déploiement de postes via SCCM
+* Intervention réseau et câblage
+* Support solution VoIP (3CX)
 
-  - [cite_start]Mise en place de l'outil de gestion de parc informatique GLPI et déploiement de PC via SCCM[cite: 39, 40].
-  - [cite_start]Configuration de matériel et virtualisation de serveurs[cite: 41, 42].
+---
 
-### [cite_start]Technicien Supérieur Systèmes et Réseaux [cite: 43]
+### Administrateur Réseau
 
-[cite_start]**Communauté de communes du bassin de Pont à Mousson** · *2022* [cite: 44]
+**Aftral** · *Octobre 2022 – Février 2023*
 
-  - [cite_start]Réalisation d'un site avec base de données et programmation d'une page de diffusion temps réel[cite: 45, 47].
-  - [cite_start]Connectivité avec systèmes Raspberry et configuration d'accès (SSH, FTP)[cite: 46, 47].
+* Mise en place de GLPI
+* Déploiement de postes
+* Configuration matériel & virtualisation
+
+---
+
+### Technicien Systèmes & Réseaux
+
+**Communauté de communes du bassin de Pont-à-Mousson** · *2022*
+
+* Développement web avec base de données
+* Configuration SSH / FTP
+* Mise en place de solutions Raspberry Pi
+* Diffusion d’informations en temps réel
+
+---
+
+## Projets
+
+### 🔹 Plateforme d’administration distante
+
+* Interface web Blazor pour piloter des machines
+* Exécution de scripts PowerShell via WinRM
+* Gestion multi-machines
+* Déploiement d’applications et mises à jour à distance
+
+---
+
+### 🔹 Infrastructure personnelle (HomeLab)
+
+* Virtualisation (Proxmox, VMware, Hyper-V)
+* Conteneurs Docker (dnsmasq, Bitwarden…)
+* Supervision complète (Zabbix + Grafana)
+* SIEM avec Security Onion
+
+---
+
+### 🔹 Automatisation & Bots
+
+* Bots Teams / Discord pour notifications
+* Automatisation des tâches IT
+* Monitoring et alerting en temps réel
+
+---
 
 ## Formation
 
-### [cite_start]BTS SNIR, Informatique [cite: 84]
+### BTS SNIR — Informatique & Réseaux
 
-[cite_start]**Lycée Henri Loritz** · *Septembre 2020 – 2022* [cite: 85, 86]
+**Lycée Henri Loritz** · *2020 – 2022*
 
-[cite_start]Spécialisation en développement d'applications et d'installations réseaux[cite: 11].
+* Spécialisation systèmes & réseaux
+* Certification : **CCNA 1**
 
-## [cite_start]Projets & Homelab (Centres d'intérêt) [cite: 71, 72]
+---
 
-### [cite_start]Domotique & Media Center [cite: 74, 75]
+## Centres d’intérêt
 
-[cite_start]**Technologies** : Docker, Homebridge, Plex, Radarr, Discord [cite: 74, 75, 76]
+* 🖥️ HomeLab & virtualisation
+* 🔐 Cybersécurité (TryHackMe, SIEM)
+* 🤖 Automatisation & scripting
+* 🎛️ Domotique (Homebridge, Docker)
 
-  - [cite_start]Pilotage centralisé de domotique via Homebridge en conteneurs Docker[cite: 74].
-  - [cite_start]Administration de serveurs Plex et automatisation des téléchargements avec notifications via Discord[cite: 75, 76].
-
-### [cite_start]Supervision, SIEM & Sécurité [cite: 78]
-
-[cite_start]**Technologies** : Zabbix, Security Onion, TryHackMe [cite: 77, 78]
-
-  - [cite_start]Déploiement et tuning de Zabbix et Security Onion pour la corrélation d'événements et alerting[cite: 78].
-  - [cite_start]Formation continue en cybersécurité via la plateforme TryHackMe[cite: 77].
-
-### [cite_start]Automatisation & Scripting [cite: 80]
-
-[cite_start]**Technologies** : PowerShell, Bots [cite: 80]
-
-  - [cite_start]Création de scripts PowerShell pour les déploiements distants et les mises à jour[cite: 80].
-  - [cite_start]Développement de bots Discord pour l'automatisation de tâches[cite: 80].
-
-## Certifications
-
-  - [cite_start]Obtention de la certification Cisco CCNA 1 [cite: 87]
+---
 
 ## Contact
 
-  - [cite_start]**Email** : [theopoleto54@gmail.com](mailto:theopoleto54@gmail.com) [cite: 8]
-  - [cite_start]**Téléphone** : 06958499709 [cite: 10]
-  - **LinkedIn** : [linkedin.com/in/theo-poletto](https://www.linkedin.com/in/theo-poletto/)
-  - **Portfolio** : [poletto-theo.vercel.app](https://poletto-theo.vercel.app/)
-  - [cite_start]**Localisation** : Nancy [cite: 7, 10]
+* **Email** : [theopoleto54@gmail.com](mailto:theopoleto54@gmail.com)
+* **Téléphone** : 06 95 84 99 70
+* **LinkedIn** : [https://www.linkedin.com/in/theo-poletto/](https://www.linkedin.com/in/theo-poletto/)
+* **Portfolio** : [https://poletto-theo.vercel.app/](https://poletto-theo.vercel.app/)
+
+---
+
+<div align="center">
+
+**Disponible pour opportunités en systèmes, réseaux et cybersécurité**
+
+</div>
