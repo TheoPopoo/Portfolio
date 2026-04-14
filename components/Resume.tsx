@@ -122,8 +122,8 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                     </li>
                     <li className="flex items-center text-[10.5px] text-slate-700 gap-2.5">
                       <Linkedin size={13} className="text-primary-600 shrink-0" />
-                      <a href="https://www.linkedin.com/in/seghir-abderrazak-248520229/" target="_blank" rel="noopener noreferrer" className="text-primary-700 font-medium hover:underline">
-                        SEGHIR ABDERRAZAK
+                      <a href="https://www.linkedin.com/in/seghir-poletto-248520229/" target="_blank" rel="noopener noreferrer" className="text-primary-700 font-medium hover:underline">
+                        THEO POLETTO
                       </a>
                     </li>
                   </ul>
