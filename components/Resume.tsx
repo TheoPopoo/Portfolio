@@ -1,7 +1,7 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Mail, Phone, MapPin, Linkedin, ExternalLink, Award, Sparkles, Briefcase, GraduationCap, Target, Car, Camera, Waves, Footprints, Clock, Eye, Globe } from 'lucide-react';
+import { Download, Mail, Phone, MapPin, Linkedin, ExternalLink, Award, Sparkles, Briefcase, GraduationCap, Target, Car, Waves, Footprints, Eye, Globe, Github, Maximize2, X, Loader } from 'lucide-react';
 import { PortfolioData } from '../types';
 
 const MotionDiv = motion.div as any;
@@ -10,14 +10,99 @@ interface ResumeProps {
   data: PortfolioData;
 }
 
+interface GitHubProject {
+  id: number;
+  name: string;
+  description: string | null;
+  url: string;
+  languages: string[];
+  stars: number;
+  updated_at: string;
+}
+
 export const Resume: React.FC<ResumeProps> = ({ data }) => {
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = 'CV_Theo_Poletto_Developpeur_Full_Stack.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [zoom, setZoom] = useState(100);
+  const [gitHubProjects, setGitHubProjects] = useState<GitHubProject[]>([]);
+  const [loadingGitHub, setLoadingGitHub] = useState(false);
+
+  // Fetch GitHub projects on component mount
+  useEffect(() => {
+    fetchGitHubProjects();
+  }, []);
+
+  const fetchGitHubProjects = async () => {
+    try {
+      setLoadingGitHub(true);
+      // Récupérer les repos de l'utilisateur GitHub
+      const response = await fetch('https://api.github.com/users/theo-poletto/repos?sort=updated&per_page=6');
+      if (!response.ok) throw new Error('Failed to fetch GitHub projects');
+      
+      const repos = await response.json();
+      
+      const projects: GitHubProject[] = repos
+        .filter((repo: any) => !repo.fork && repo.description)
+        .slice(0, 5)
+        .map((repo: any) => ({
+          id: repo.id,
+          name: repo.name,
+          description: repo.description,
+          url: repo.html_url,
+          languages: repo.language ? [repo.language] : [],
+          stars: repo.stargazers_count,
+          updated_at: repo.updated_at
+        }));
+      
+      setGitHubProjects(projects);
+    } catch (error) {
+      console.error('Erreur lors de la récupération des projets GitHub:', error);
+      // Fallback: garder les projets vides si l'API échoue
+    } finally {
+      setLoadingGitHub(false);
+    }
+  };
+
+  const handleDownload = async () => {
+    try {
+      const cvElement = document.getElementById('cv-print-area');
+      if (!cvElement) {
+        console.error('CV element not found');
+        return;
+      }
+
+      // Utiliser html2canvas et jsPDF pour générer le PDF
+      const html2canvas = (await import('html2canvas')).default;
+      const jsPDF = (await import('jspdf')).jsPDF;
+
+      const canvas = await html2canvas(cvElement, {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        backgroundColor: '#ffffff'
+      });
+
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: 'a4'
+      });
+
+      const imgWidth = 210;
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      
+      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+      pdf.save(`CV_Theo_Poletto_${new Date().toLocaleDateString('fr-FR')}.pdf`);
+    } catch (error) {
+      console.error('Erreur lors de la génération du PDF:', error);
+      // Fallback: télécharger le PDF statique si la génération échoue
+      const link = document.createElement('a');
+      link.href = '/resume.pdf';
+      link.download = `CV_Theo_Poletto_${new Date().toLocaleDateString('fr-FR')}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   };
 
   return (
@@ -35,29 +120,108 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
             Mon <span className="text-primary-600">CV</span>
           </h2>
           <p className="text-slate-600 max-w-2xl mx-auto mb-6 text-lg">
-            Un aperçu de mon parcours.
+            Un aperçu de mon parcours professionnel et académique.
           </p>
-          <button 
-            onClick={handleDownload}
-            className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-all shadow-xl shadow-primary-500/25 hover:shadow-primary-500/40 font-medium"
-          >
-            <Download size={20} className="mr-3 hidden md:block" />
-            <Eye size={20} className="mr-3 md:hidden" />
-            <span className="hidden md:inline">Télécharger mon CV (PDF)</span>
-            <span className="md:hidden">Voir mon CV</span>
-          </button>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <button 
+              onClick={handleDownload}
+              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 font-medium text-sm md:text-base"
+            >
+              <Download size={18} className="mr-2" />
+              <span className="hidden md:inline">Télécharger mon CV</span>
+              <span className="md:hidden">Télécharger</span>
+            </button>
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="inline-flex items-center px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-all font-medium text-sm md:text-base"
+            >
+              <Eye size={18} className="mr-2" />
+              <span className="hidden md:inline">Voir en grand</span>
+              <span className="md:hidden">Voir</span>
+            </button>
+          </div>
         </MotionDiv>
 
         {/* NATIVE PDF VIEWER FOR DESKTOP */}
-        <div className="hidden md:block max-w-[1000px] mx-auto print:hidden h-[850px] shadow-2xl rounded-2xl overflow-hidden border border-slate-200">
-           <object 
-             data="/resume.pdf" 
-             type="application/pdf" 
-             className="w-full h-full"
-           >
-             <p className="p-4 text-center">Votre navigateur ne supporte pas la lecture de PDF. <a href="/resume.pdf" className="text-primary-600 underline font-semibold">Télécharger le PDF</a></p>
-           </object>
+        <div className="hidden md:block max-w-4xl mx-auto print:hidden bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200 mb-12">
+          <div className="h-[800px] md:h-[900px] w-full">
+            <object 
+              data="/resume.pdf" 
+              type="application/pdf" 
+              className="w-full h-full"
+            >
+              <div className="p-6 text-center text-slate-600">
+                <p className="mb-4">Votre navigateur ne supporte pas la lecture de PDF.</p>
+                <a href="/resume.pdf" className="text-primary-600 underline font-semibold hover:text-primary-700">
+                  Télécharger le CV en PDF
+                </a>
+              </div>
+            </object>
+          </div>
         </div>
+
+        {/* Mobile Modal for PDF Preview */}
+        {isModalOpen && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+            onClick={() => setIsModalOpen(false)}
+          >
+            <motion.div 
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.95 }}
+              className="bg-white rounded-lg shadow-2xl w-full max-w-3xl most-h-[90vh] flex flex-col"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex justify-between items-center p-4 border-b border-slate-200">
+                <h3 className="text-lg font-semibold text-slate-800">Aperçu du CV</h3>
+                <div className="flex items-center gap-2">
+                  <div className="flex gap-1">
+                    <button 
+                      onClick={() => setZoom(Math.max(50, zoom - 10))}
+                      className="p-2 hover:bg-slate-100 rounded text-sm font-medium"
+                    >
+                      −
+                    </button>
+                    <span className="px-3 py-2 bg-slate-100 rounded text-sm font-medium min-w-[60px] text-center">
+                      {zoom}%
+                    </span>
+                    <button 
+                      onClick={() => setZoom(Math.min(200, zoom + 10))}
+                      className="p-2 hover:bg-slate-100 rounded text-sm font-medium"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button 
+                    onClick={() => setIsModalOpen(false)}
+                    className="p-2 hover:bg-slate-100 rounded"
+                  >
+                    <X size={20} className="text-slate-600" />
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1 overflow-auto p-4">
+                <div 
+                  className="bg-white mx-auto shadow-lg will-change-transform transition-transform"
+                  style={{ 
+                    transform: `scale(${zoom / 100})`,
+                    transformOrigin: 'top center',
+                    width: '210mm'
+                  }}
+                >
+                  {/* Embedded CV Content Preview */}
+                  <div id="cv-preview" className="resume-container flex flex-col md:flex-row bg-white text-slate-800 w-full" style={{ width: '210mm', height: '297mm', padding: '0' }}>
+                    {/* Prévisualisation du CV avec zoom */}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
 
         {/* HIDDEN HTML CV FOR PUPPETEER PRINTING ONLY */}
         {/* CSS Reset inside cv-print-area to enforce typography */}
