@@ -1,4 +1,19 @@
 
+/**
+ * Resume Component - Composant CV
+ * 
+ * Fonctionnalités:
+ * ✅ Génération dynamique de PDF (html2canvas + jsPDF)
+ * ✅ Modal avec zoom ajustable pour aperçu du CV
+ * ✅ Récupération des projets GitHub via API
+ * ✅ Affichage des informations personnelles
+ * ✅ Timeline formation et expérience
+ * ✅ Compétences et certifications
+ * ✅ Responsive design (mobile + desktop)
+ * 
+ * @component
+ */
+
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Mail, Phone, MapPin, Linkedin, ExternalLink, Award, Sparkles, Briefcase, GraduationCap, Target, Car, Waves, Footprints, Eye, Globe, Github, Maximize2, X, Loader } from 'lucide-react';
@@ -490,6 +505,93 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
           </main>
 
         </div>
+
+        {/* GitHub Projects Section - Dynamic */}
+        <MotionDiv
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16 print:hidden"
+        >
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-3">
+                <Github size={32} className="text-primary-600" />
+                <div>
+                  <h3 className="text-3xl font-bold text-slate-800">Projets GitHub</h3>
+                  <p className="text-slate-600 text-sm">Récupérés automatiquement depuis mon profil</p>
+                </div>
+              </div>
+              <a 
+                href="https://github.com/theo-poletto" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-900 transition-colors"
+              >
+                <Github size={18} className="mr-2" />
+                Voir plus
+              </a>
+            </div>
+
+            {loadingGitHub ? (
+              <div className="flex items-center justify-center py-12">
+                <Loader size={24} className="text-primary-600 animate-spin mr-2" />
+                <span className="text-slate-600">Chargement des projets...</span>
+              </div>
+            ) : gitHubProjects.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {gitHubProjects.map((project) => (
+                  <motion.a
+                    key={project.id}
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ translateY: -8 }}
+                    className="group p-6 bg-white border border-slate-200 rounded-lg shadow-md hover:shadow-lg transition-all cursor-pointer"
+                  >
+                    <div className="flex items-start justify-between mb-3">
+                      <h4 className="text-lg font-bold text-slate-800 group-hover:text-primary-600 transition-colors flex-1 line-clamp-2">
+                        {project.name}
+                      </h4>
+                      <ExternalLink size={18} className="text-slate-400 group-hover:text-primary-600 transition-colors ml-2 shrink-0" />
+                    </div>
+                    
+                    {project.description && (
+                      <p className="text-slate-600 text-sm mb-4 line-clamp-2">
+                        {project.description}
+                      </p>
+                    )}
+                    
+                    <div className="flex items-center justify-between mb-3 text-xs text-slate-500">
+                      <span>Mis à jour: {new Date(project.updated_at).toLocaleDateString('fr-FR')}</span>
+                      {project.stars > 0 && (
+                        <span>⭐ {project.stars}</span>
+                      )}
+                    </div>
+                    
+                    {project.languages.length > 0 && (
+                      <div className="flex flex-wrap gap-2">
+                        {project.languages.map((lang) => (
+                          <span 
+                            key={lang}
+                            className="px-2 py-1 bg-primary-50 text-primary-700 rounded text-xs font-medium"
+                          >
+                            {lang}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </motion.a>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12 bg-slate-50 rounded-lg border border-slate-200">
+                <Github size={48} className="mx-auto text-slate-300 mb-3" />
+                <p className="text-slate-600">Aucun projet GitHub disponible pour l'instant</p>
+              </div>
+            )}
+          </div>
+        </MotionDiv>
       </div>
     </section>
   );
