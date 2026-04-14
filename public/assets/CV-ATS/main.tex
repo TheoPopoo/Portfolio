@@ -1,0 +1,118 @@
+\documentclass[10pt,a4paper]{article}
+
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{anyfontsize}
+
+\usepackage{xcolor}
+
+% Marges très fines
+\usepackage[margin=0.4in]{geometry}
+
+% Personnalisation des titres de sections
+\usepackage{titlesec}
+\titleformat{\section}{\fontsize{13}{16}\bfseries\uppercase}{}{0em}{}[\vspace{-0.5ex}\titlerule]
+\titlespacing{\section}{0pt}{2.5ex}{1.2ex}
+
+% Espacement réduit pour les listes
+\usepackage{enumitem}
+
+% Gestion des liens
+\usepackage[hidelinks]{hyperref}
+
+% Suppression du numéro de page
+\pagestyle{empty}
+
+\begin{document}
+
+% --- EN-TÊTE ---
+\begin{center}
+    {\fontsize{28}{34}\bfseries SEGHIR ABDERRAZAK} \\ \vspace{0.05cm}
+    {\fontsize{16}{20}\selectfont Développeur Full Stack} \\ \vspace{0.05cm}
+    {\fontsize{11}{14}\itshape Disponible en CDI à partir de septembre 2026} \\ \vspace{0.1cm}
+    {\normalsize Nancy, France | Permis B — Véhiculé | (+33) 7 66 72 99 78 | \href{mailto:abderrazakseghir1@gmail.com}{abderrazakseghir1@gmail.com} | \href{https://www.linkedin.com/in/seghir-abderrazak-248520229/}{\textcolor{blue}{LinkedIn}} | \href{https://seghir-portfolio.vercel.app/}{\textcolor{blue}{Portfolio}}}
+\end{center}
+
+\vspace{0.2cm}
+
+% --- PROFIL ---
+\section*{Profil}
+\noindent Étudiant en Master 2 MIAGE — Systèmes d'Information Distribués à l'Université de Lorraine. Développeur Full Stack spécialisé en .NET/Blazor et mobile Flutter, avec une expérience concrète en architecture microservices (DDD) et DevOps. En cours de préparation du certificat AWS Certified Cloud Practitioner (CLF-C02). À la recherche d'un CDI à partir de septembre 2026.
+
+% --- COMPÉTENCES TECHNIQUES ---
+\section*{Compétences Techniques}
+\begin{itemize}[leftmargin=0.5cm, noitemsep, topsep=0pt, partopsep=0pt]
+    \item \textbf{Architecture Logicielle :} Microservices, Domain-Driven Design (DDD), Event-Driven Architecture (RabbitMQ), Modélisation UML.
+    \item \textbf{Back-end \& Front-end :} C\#, Java, Python, JavaScript | .NET, Blazor, Spring Boot, Django, Node.js | React, TypeScript, MudBlazor.
+    \item \textbf{Développement Mobile :} Flutter, Dart.
+    \item \textbf{Bases de Données :} PostgreSQL, SQL Server, MongoDB.
+    \item \textbf{DevOps \& Cloud :} Docker, Kubernetes, CI/CD, AWS, Git, GitHub.
+    \item \textbf{Gestion de Projet :} Agile/Scrum, Jira, Trello, REST APIs.
+\end{itemize}
+
+% --- EXPÉRIENCES PROFESSIONNELLES ---
+\section*{Expériences Professionnelles}
+
+\noindent {\fontsize{12}{14}\bfseries Développeur Full Stack (Alternance)} \hfill \textbf{2024 — Présent} \\
+\textit{Afludia} \hfill \textit{Nancy, France}
+\begin{itemize}[leftmargin=0.5cm, noitemsep, topsep=0pt, partopsep=0pt]
+    \item Refonte et migration d'applications internes vers une architecture modulaire et scalable (amélioration de la maintenabilité et des performances).
+    \item Développement et évolution de fonctionnalités critiques sur un ERP interne utilisé en production avec .NET, Blazor et MudBlazor.
+    \item Conception et intégration d'APIs REST performantes ; contribution à plusieurs projets full-stack (API, UI, base de données SQL Server).
+    \item Optimisation, debugging et revue de code ; collaboration Agile en équipe pluridisciplinaire.
+\end{itemize}
+
+\vspace{0.2cm}
+
+\noindent {\fontsize{12}{14}\bfseries Développeur Full Stack (Stage)} \hfill \textbf{Avril 2024 — Juin 2024} \\
+\textit{Solutions Développement Informatique} \hfill \textit{France}
+\begin{itemize}[leftmargin=0.5cm, noitemsep, topsep=0pt, partopsep=0pt]
+    \item Développement complet d'une application web (front-end et back-end).
+    \item Intégration du site web dans une application mobile Flutter et réalisation des tests unitaires.
+\end{itemize}
+
+% --- PROJETS TECHNIQUES ---
+\section*{Projets Techniques}
+
+\noindent {\fontsize{12}{14}\bfseries Architecte \& Dev Full Stack | TRD — Paris Sportifs} \hfill \textbf{Sept. 2025 — Mars 2026}
+\begin{itemize}[leftmargin=0.5cm, noitemsep, topsep=0pt, partopsep=0pt]
+    \item Architecture microservices DDD pour une plateforme de paris sportifs (Coupe du Monde 2026) : .NET 10, Blazor, Java Spring Boot, PostgreSQL.
+    \item Conteneurisation Docker, orchestration Kubernetes, communication asynchrone via RabbitMQ et pipelines CI/CD.
+\end{itemize}
+
+\vspace{0.2cm}
+
+\noindent {\fontsize{12}{14}\bfseries Dev Full Stack | MByte — Intégration de Stockage Externe} \hfill \textbf{2024}
+\begin{itemize}[leftmargin=0.5cm, noitemsep, topsep=0pt, partopsep=0pt]
+    \item Intégration d'Amazon S3 et WebDAV avec chiffrement des fichiers avant stockage ; architecture multi-backend avec load balancing.
+\end{itemize}
+
+\vspace{0.2cm}
+
+\noindent {\fontsize{12}{14}\bfseries Développeur Mobile | Esiway (Projet Académique)} \hfill \textbf{2022 — 2023}
+\begin{itemize}[leftmargin=0.5cm, noitemsep, topsep=0pt, partopsep=0pt]
+    \item Application mobile Flutter de gestion administrative scolaire, développée selon la Flutter Clean Architecture (épurée, intuitive, performante).
+\end{itemize}
+
+\vspace{0.2cm}
+
+\noindent {\fontsize{12}{14}\bfseries Dev Full Stack | Prigra (Projet Académique)} \hfill \textbf{2022 — 2023}
+\begin{itemize}[leftmargin=0.5cm, noitemsep, topsep=0pt, partopsep=0pt]
+    \item Plateforme web de gestion des projets de fin d'étude (Django, ReactJS) — conception, intégration et méthodologie Agile Scrum.
+\end{itemize}
+
+% --- FORMATION ---
+\section*{Formation}
+
+\noindent \textbf{Master 1 \& 2 MIAGE — Systèmes d'Information Distribués (SID)} \hfill \textbf{2024 — 2026} \\
+\textit{Institut des Sciences du Digital, Management Cognition (IDMC) — Université de Lorraine, Nancy}
+
+\vspace{0.15cm}
+\noindent \textbf{Licence MIAGE} \hfill \textbf{2023 — 2024} \\
+\textit{Institut des Sciences du Digital, Management Cognition (IDMC) — Université de Lorraine, Nancy}
+
+\vspace{0.15cm}
+\noindent \textbf{Cycle Ingénieur \& Classes Préparatoires en Informatique} \hfill \textbf{2020 — 2023} \\
+\textit{École Nationale Supérieure d'Informatique (ESI) — Sidi Bel Abbès, Algérie}
+
+\end{document}
