@@ -163,7 +163,6 @@ Grâce à mon expérience en entreprise, je combine **administration système**,
 ## Contact
 
 * **Email** : [theopoleto54@gmail.com](mailto:theopoleto54@gmail.com)
-* **Téléphone** : 06 95 84 99 70
 * **LinkedIn** : [https://www.linkedin.com/in/theo-poletto/](https://www.linkedin.com/in/theo-poletto/)
 * **Portfolio** : [https://poletto-theo.vercel.app/](https://poletto-theo.vercel.app/)
 
