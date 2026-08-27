@@ -4,15 +4,28 @@ export const portfolioData: PortfolioData = {
   personal: {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
-    status: "Spécialisé en systèmes, réseaux et cybersécurité",
-    objective: "Recherche d’opportunités en administration systèmes & réseaux, avec une forte dimension automatisation et sécurité",
-    description: "Administrateur systèmes et réseaux avec une appétence pour la cybersécurité et l’automatisation. J’interviens sur la gestion d’infrastructures, la virtualisation, la supervision et le développement d’outils internes (PowerShell, C#, Blazor) pour optimiser les environnements IT.",
+    status: "Recherche alternance Cybersécurité — Mastère IPSSI (Bac+5, 2 ans) — dès septembre 2026",
+    objective: "Administrateur systèmes et réseaux en poste (CDI), candidat en alternance dans le cadre d’un Mastère Cybersécurité (Bac+5, IPSSI, 2 ans, rentrée janvier 2027). Ouvert à découvrir les différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
+    description: "Administrateur systèmes et réseaux en poste (CDI chez Afludia), en reconversion vers la cybersécurité via un Mastère en alternance (IPSSI, 2 ans, rentrée janvier 2027). J’interviens sur la gestion d’infrastructures, la virtualisation, la supervision et le développement d’outils internes (PowerShell, C#, Blazor) — un socle systèmes/réseaux directement mobilisable pour la défense d’infrastructures.",
     avatar: "/assets/image/avatar.png"
   },
 
   projects: [
     {
       id: 1,
+      title: "Cluster SQL Server sécurisé & notifications Teams",
+      images: [],
+      description: "Déploiement d’un cluster SQL Server (haute disponibilité) avec segmentation réseau via VLAN, réalisé en contexte professionnel chez Afludia.",
+      technologies: ["SQL Server", "VLAN", "PowerShell", "Microsoft Teams"],
+      achievements: [
+        "Déploiement et configuration d’un cluster SQL Server pour la haute disponibilité",
+        "Segmentation réseau via VLAN pour sécuriser l’accès aux bases de données",
+        "Notifications automatisées (alertes) via webhooks Microsoft Teams"
+      ]
+    },
+
+    {
+      id: 2,
       title: "Plateforme d’administration distante",
       images: [
         "/assets/image/trd/trdpr1.png",
@@ -29,7 +42,7 @@ export const portfolioData: PortfolioData = {
     },
 
     {
-      id: 2,
+      id: 3,
       title: "Infrastructure Docker & Services Réseau",
       images: [
         "/assets/image/mbyte/mbytepr1.png",
@@ -46,23 +59,22 @@ export const portfolioData: PortfolioData = {
     },
 
     {
-      id: 3,
-      title: "Supervision & SIEM",
+      id: 4,
+      title: "Supervision & SIEM (découverte)",
       images: [
         "/assets/image/esiway/es01.png"
       ],
-      description: "Mise en place d’une infrastructure de supervision et de sécurité.",
-      technologies: ["Zabbix", "Grafana", "Promtail", "Security Onion"],
+      description: "Installation et prise en main de Security Onion (NSM/IDS) en environnement de test, couplée à Zabbix/Grafana.",
+      technologies: ["Zabbix", "Grafana", "Security Onion"],
       achievements: [
-        "Supervision complète des infrastructures",
-        "Mise en place d’alerting",
-        "Centralisation des logs",
-        "Analyse de sécurité via SIEM"
+        "Installation et configuration de Security Onion en environnement de test",
+        "Supervision associée via Zabbix/Grafana",
+        "Première approche des concepts NSM/IDS et centralisation des logs"
       ]
     },
 
     {
-      id: 4,
+      id: 5,
       title: "Automatisation & Scripts IT",
       images: [
         "/assets/image/prigra/prigra.png"
@@ -80,6 +92,16 @@ export const portfolioData: PortfolioData = {
 
   education: [
     {
+      school: "IPSSI",
+      degrees: [
+        {
+          degree: "Mastère Cybersécurité (Bac+5)",
+          period: "Rentrée Janvier 2027",
+          description: "Alternance 2 ans, rythme 3 semaines entreprise / 1 semaine école."
+        }
+      ]
+    },
+    {
       school: "Lycée Henri Loritz",
       degrees: [
         {
@@ -96,12 +118,11 @@ export const portfolioData: PortfolioData = {
       position: "Administrateur Systèmes & Réseaux / Développeur",
       company: "Afludia",
       period: "Octobre 2024 - Aujourd’hui",
-      description: "",
+      description: "Supervision, sécurisation et automatisation de l’infrastructure IT au quotidien.",
       achievements: [
-        "Développement d’outils internes en C# et SQL Server",
-        "Automatisation des tâches via PowerShell (WinRM, déploiement, mises à jour)",
-        "Création d’une interface web en Blazor pour centraliser l’administration",
-        "Mise en place de supervision (Zabbix, Grafana)",
+        "Supervision et détection d’anomalies sur l’infrastructure via Zabbix/Grafana (15 à 20 serveurs, dont un cluster)",
+        "Automatisation et durcissement des déploiements via PowerShell (WinRM, mises à jour) sur un parc de 50 postes",
+        "Développement d’une interface Blazor de centralisation de l’administration (gestion des accès)",
         "Gestion d’infrastructures virtualisées et conteneurisées"
       ]
     },
@@ -109,24 +130,22 @@ export const portfolioData: PortfolioData = {
       position: "Administrateur Système",
       company: "ArcelorMittal",
       period: "Juin 2024 - Septembre 2024",
-      description: "",
+      description: "Administration et sécurisation des accès sur un parc de serveurs physiques et virtuels.",
       achievements: [
         "Déploiement de serveurs physiques et virtuels",
-        "Administration Active Directory et System Center",
-        "Supervision d’infrastructures",
-        "Gestion des incidents"
+        "Administration des droits et accès via Active Directory et System Center",
+        "Supervision d’infrastructures et gestion des incidents"
       ]
     },
     {
-      position: "Technicien Systèmes & Réseaux",
+      position: "Technicien Systèmes & Réseaux (Intérim)",
       company: "Röchling",
       period: "Juillet 2023",
-      description: "",
+      description: "Mission d’intérim en support technique et déploiement de postes.",
       achievements: [
         "Support technique et gestion des tickets",
         "Déploiement de postes via SCCM",
-        "Support VoIP (3CX)",
-        "Interventions réseau"
+        "Support VoIP (3CX) et interventions réseau"
       ]
     }
   ],
@@ -155,6 +174,18 @@ export const portfolioData: PortfolioData = {
   ],
 
   skillCategories: [
+    {
+      category: "Cybersécurité & Supervision",
+      icon: "🔐",
+      color: "from-slate-400 to-slate-500",
+      skills: [
+        "Security Onion",
+        "Zabbix",
+        "Grafana",
+        "Azure AD / Entra ID",
+        "VLAN"
+      ]
+    },
     {
       category: "Systèmes",
       icon: "🖥️",
@@ -200,18 +231,6 @@ export const portfolioData: PortfolioData = {
         "Blazor",
         "SQL Server",
         "Git"
-      ]
-    },
-    {
-      category: "Cybersécurité & Supervision",
-      icon: "🔐",
-      color: "from-slate-400 to-slate-500",
-      skills: [
-        "Zabbix",
-        "Grafana",
-        "Security Onion",
-        "Monitoring",
-        "SIEM"
       ]
     }
   ],
