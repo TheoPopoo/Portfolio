@@ -4,9 +4,9 @@ export const portfolioData: PortfolioData = {
   personal: {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
-    status: "Recherche alternance Cybersécurité — Mastère IPSSI (Bac+5, 2 ans) — dès septembre 2026",
-    objective: "Administrateur systèmes et réseaux en poste (CDI), candidat en alternance dans le cadre d’un Mastère Cybersécurité (Bac+5, IPSSI, 2 ans, rentrée janvier 2027). Ouvert à découvrir les différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
-    description: "Administrateur systèmes et réseaux en poste (CDI chez Afludia), en reconversion vers la cybersécurité via un Mastère en alternance (IPSSI, 2 ans, rentrée janvier 2027). J’interviens sur la gestion d’infrastructures, la virtualisation, la supervision et le développement d’outils internes (PowerShell, C#, Blazor) — un socle systèmes/réseaux directement mobilisable pour la défense d’infrastructures.",
+    status: "Recherche alternance Cybersécurité — Mastère IPSSI (Bac+5, 2 ans) — rentrée janvier 2027",
+    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Mastère Cybersécurité (Bac+5, IPSSI, 2 ans, rentrée janvier 2027) et recherche mon entreprise d'accueil. Ouvert à découvrir les différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
+    description: "Actuellement en alternance chez Afludia (Bac+3), en poursuite d’études vers la cybersécurité via un Mastère en alternance (IPSSI, 2 ans, rentrée janvier 2027). J’interviens sur la gestion d’infrastructures, la virtualisation, la supervision et le développement d’outils internes (PowerShell, C#, Blazor) — un socle systèmes/réseaux directement mobilisable pour la défense d’infrastructures.",
     avatar: "/assets/image/avatar.png"
   },
 
@@ -26,11 +26,23 @@ export const portfolioData: PortfolioData = {
 
     {
       id: 2,
+      title: "Infrastructure Multi-Systèmes (Windows/Linux)",
+      images: [],
+      githubUrl: "https://github.com/TheoPopoo/Projets/tree/main/Infrastructure-Multi-Systemes",
+      description: "Lab d’infrastructure réseau et système complète (VirtualBox), intégrant des environnements Windows et Linux interopérables.",
+      technologies: ["Active Directory", "GPO", "DNS/DHCP", "Linux (realmd/sssd)", "SSH"],
+      achievements: [
+        "Déploiement AD/DNS/DHCP (Windows Server 2022) avec unités d’organisation et GPO de sécurité",
+        "Intégration de clients Linux au domaine Active Directory via realmd/sssd",
+        "Tolérance aux pannes via RAID 1 logiciel sur les disques serveur",
+        "Durcissement SSH par authentification par clé RSA (passphrase) et administration web via Cockpit"
+      ]
+    },
+
+    {
+      id: 6,
       title: "Plateforme d’administration distante",
-      images: [
-        "/assets/image/trd/trdpr1.png",
-        "/assets/image/trd/trdpr2.png"
-      ],
+      images: [],
       description: "Interface web permettant de piloter et administrer des machines à distance via WinRM.",
       technologies: ["PowerShell", "WinRM", "Blazor", "C#"],
       achievements: [
@@ -44,10 +56,7 @@ export const portfolioData: PortfolioData = {
     {
       id: 3,
       title: "Infrastructure Docker & Services Réseau",
-      images: [
-        "/assets/image/mbyte/mbytepr1.png",
-        "/assets/image/mbyte/mbytepr2.png"
-      ],
+      images: [],
       description: "Déploiement de services réseau et outils via Docker dans un environnement virtualisé.",
       technologies: ["Docker", "dnsmasq", "Bitwarden", "Linux"],
       achievements: [
@@ -61,9 +70,7 @@ export const portfolioData: PortfolioData = {
     {
       id: 4,
       title: "Supervision & SIEM (découverte)",
-      images: [
-        "/assets/image/esiway/es01.png"
-      ],
+      images: [],
       description: "Installation et prise en main de Security Onion (NSM/IDS) en environnement de test, couplée à Zabbix/Grafana.",
       technologies: ["Zabbix", "Grafana", "Security Onion"],
       achievements: [
@@ -76,9 +83,7 @@ export const portfolioData: PortfolioData = {
     {
       id: 5,
       title: "Automatisation & Scripts IT",
-      images: [
-        "/assets/image/prigra/prigra.png"
-      ],
+      images: [],
       description: "Développement de scripts pour automatiser les tâches IT.",
       technologies: ["PowerShell", "Python"],
       achievements: [
@@ -102,6 +107,16 @@ export const portfolioData: PortfolioData = {
       ]
     },
     {
+      school: "LiveCampus",
+      degrees: [
+        {
+          degree: "Bachelor Administrateur Systèmes, Réseaux & Cybersécurité",
+          period: "2024 - 2027",
+          description: "En alternance chez Afludia."
+        }
+      ]
+    },
+    {
       school: "Lycée Henri Loritz",
       degrees: [
         {
@@ -115,14 +130,15 @@ export const portfolioData: PortfolioData = {
 
   experience: [
     {
-      position: "Administrateur Systèmes & Réseaux / Développeur",
+      position: "Administrateur Systèmes & Réseaux / Développeur (Alternance)",
       company: "Afludia",
-      period: "Octobre 2024 - Aujourd’hui",
-      description: "Supervision, sécurisation et automatisation de l’infrastructure IT au quotidien.",
+      period: "Octobre 2024 - Janvier 2027",
+      description: "Alternance Bac+3 : supervision, sécurisation et automatisation de l’infrastructure IT au quotidien.",
       achievements: [
+        "Développement d’outils internes en C# et SQL Server",
         "Supervision et détection d’anomalies sur l’infrastructure via Zabbix/Grafana (15 à 20 serveurs, dont un cluster)",
         "Automatisation et durcissement des déploiements via PowerShell (WinRM, mises à jour) sur un parc de 50 postes",
-        "Développement d’une interface Blazor de centralisation de l’administration (gestion des accès)",
+        "Création d’une interface web en Blazor pour centraliser l’administration",
         "Gestion d’infrastructures virtualisées et conteneurisées"
       ]
     },
@@ -133,8 +149,9 @@ export const portfolioData: PortfolioData = {
       description: "Administration et sécurisation des accès sur un parc de serveurs physiques et virtuels.",
       achievements: [
         "Déploiement de serveurs physiques et virtuels",
-        "Administration des droits et accès via Active Directory et System Center",
-        "Supervision d’infrastructures et gestion des incidents"
+        "Administration Active Directory et System Center",
+        "Supervision d’infrastructures",
+        "Gestion des incidents"
       ]
     },
     {
@@ -145,7 +162,8 @@ export const portfolioData: PortfolioData = {
       achievements: [
         "Support technique et gestion des tickets",
         "Déploiement de postes via SCCM",
-        "Support VoIP (3CX) et interventions réseau"
+        "Support VoIP (3CX)",
+        "Interventions réseau"
       ]
     }
   ],
@@ -154,8 +172,8 @@ export const portfolioData: PortfolioData = {
     email: "theopoleto54@gmail.com",
     phone: "06 95 84 99 70",
     linkedin: "https://www.linkedin.com/in/theo-poletto/",
-    github: "",
-    location: "France"
+    github: "https://github.com/TheoPopoo",
+    location: "Nancy et alentours"
   },
 
   skills: [

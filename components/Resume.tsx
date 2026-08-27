@@ -293,7 +293,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                     </li>
                     <li className="flex items-center text-[10.5px] text-slate-700 gap-2.5">
                       <MapPin size={13} className="text-primary-600 shrink-0" />
-                      Mobilité : Toute la France
+                      Mobilité : Nancy et alentours
                     </li>
                     <li className="flex items-center text-[10.5px] text-slate-700 gap-2.5">
                       <Car size={13} className="text-primary-600 shrink-0" />

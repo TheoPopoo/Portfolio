@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, X, Maximize2, Layers, ZoomIn } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, Maximize2, Layers, ZoomIn, Github } from 'lucide-react';
 import { Project } from '../types';
 
 interface ProjectsProps {
@@ -287,11 +287,23 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
         {/* Right: Content (or Bottom on mobile) */}
         <div className="w-full md:w-1/2 p-4 md:p-6 overflow-y-auto flex-1">
           <h3 className="text-2xl font-bold text-slate-900 mb-2">{project.title}</h3>
-          
+
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center mb-4 px-3 py-1.5 bg-slate-800 text-white text-xs font-medium rounded-lg hover:bg-slate-900 transition-colors"
+            >
+              <Github size={14} className="mr-1.5" /> Voir sur GitHub
+            </a>
+          )}
+
           <div className="flex flex-wrap gap-2 mb-6">
             {project.technologies.map((tech) => (
-              <span 
-                key={tech} 
+              <span
+                key={tech}
                 className="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-semibold rounded-full border border-primary-100"
               >
                 {tech}

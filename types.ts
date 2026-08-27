@@ -14,6 +14,7 @@ export interface Project {
   description: string;
   technologies: string[];
   achievements: string[];
+  githubUrl?: string;
 }
 
 export interface Degree {

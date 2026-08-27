@@ -7,7 +7,7 @@
 \usepackage{xcolor}
 
 % Marges très fines
-\usepackage[margin=0.35in]{geometry}
+\usepackage[margin=0.4in]{geometry}
 
 % Personnalisation des titres de sections
 \usepackage{titlesec}
@@ -24,20 +24,21 @@
 \pagestyle{empty}
 
 \begin{document}
+\small
 
 % --- EN-TÊTE ---
 \begin{center}
     {\fontsize{28}{34}\bfseries THEO POLETTO} \\ \vspace{0.05cm}
-    {\fontsize{16}{20}\selectfont Candidat Alternance Cybersécurité --- Mastère IPSSI (Bac+5, 2 ans)} \\ \vspace{0.05cm}
-    {\fontsize{11}{14}\itshape Administrateur Systèmes \& Réseaux en poste | Disponible dès septembre 2026 | Rentrée janvier 2027} \\ \vspace{0.05cm}
-    {\normalsize France | Permis B | (+33) 6 95 84 99 70 | \href{mailto:theopoleto54@gmail.com}{theopoleto54@gmail.com} | \href{https://www.linkedin.com/in/theo-poletto/}{\textcolor{blue}{LinkedIn}} | \href{https://poletto-theo.vercel.app/}{\textcolor{blue}{Portfolio}}}
+    {\fontsize{16}{20}\selectfont Alternant Administrateur Systèmes \& Réseaux --- Recherche alternance Cybersécurité (Mastère IPSSI, Bac+5)} \\ \vspace{0.05cm}
+    {\fontsize{11}{14}\itshape Fin de contrat actuel (Bac+3) : janvier 2027 | Recherche entreprise d'accueil pour la rentrée janvier 2027} \\ \vspace{0.05cm}
+    {\normalsize Nancy et alentours | Permis B | (+33) 6 95 84 99 70 | \href{mailto:theopoleto54@gmail.com}{theopoleto54@gmail.com} | \href{https://www.linkedin.com/in/theo-poletto/}{\textcolor{blue}{LinkedIn}} | \href{https://poletto-theo.vercel.app/}{\textcolor{blue}{Portfolio}}}
 \end{center}
 
-\vspace{0.12cm}
+\vspace{0.1cm}
 
 % --- PROFIL ---
 \section*{Profil}
-\noindent Administrateur systèmes et réseaux en poste (CDI chez Afludia), candidat en alternance dans le cadre d'un Mastère Cybersécurité (Bac+5, IPSSI, 2 ans, rentrée janvier 2027). Ouvert à découvrir les différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance), mon socle systèmes et réseaux (Active Directory, virtualisation, supervision) constitue une base directement mobilisable pour la défense d'infrastructures.
+\noindent Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Mastère Cybersécurité (Bac+5, IPSSI, 2 ans, rentrée janvier 2027) et recherche mon entreprise d'accueil. Ouvert à découvrir les différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance), mon socle systèmes et réseaux (Active Directory, virtualisation, supervision) constitue une base directement mobilisable pour la défense d'infrastructures.
 
 % --- COMPÉTENCES TECHNIQUES ---
 \section*{Compétences Techniques}
@@ -53,16 +54,17 @@
 % --- EXPÉRIENCES PROFESSIONNELLES ---
 \section*{Expériences Professionnelles}
 
-\noindent {\fontsize{12}{14}\bfseries Administrateur Systèmes \& Réseaux / Développeur} \hfill \textbf{2024 — Présent} \\
+\noindent {\fontsize{12}{14}\bfseries Administrateur Systèmes \& Réseaux / Développeur (Alternance)} \hfill \textbf{2024 — Janvier 2027} \\
 \textit{Afludia} \hfill \textit{France}
 \begin{itemize}[leftmargin=0.5cm, noitemsep, topsep=0pt, partopsep=0pt]
+    \item Développement d'outils internes en C\# et SQL Server.
     \item Supervision et détection d'anomalies sur l'infrastructure via Zabbix/Grafana (15 à 20 serveurs, dont un cluster).
     \item Automatisation et durcissement des déploiements via PowerShell/WinRM (parc de 50 postes).
     \item Développement d'une interface Blazor de centralisation de l'administration (gestion des accès utilisateurs).
     \item Gestion d'infrastructures virtualisées et conteneurisées (Hyper-V, Proxmox, Docker).
 \end{itemize}
 
-\vspace{0.12cm}
+\vspace{0.1cm}
 
 \noindent {\fontsize{12}{14}\bfseries Administrateur Système} \hfill \textbf{Juin 2024 — Septembre 2024} \\
 \textit{ArcelorMittal} \hfill \textit{France}
@@ -72,7 +74,7 @@
     \item Supervision d'infrastructures et gestion des incidents.
 \end{itemize}
 
-\vspace{0.12cm}
+\vspace{0.1cm}
 
 \noindent {\fontsize{12}{14}\bfseries Technicien Systèmes \& Réseaux (Intérim)} \hfill \textbf{Juillet 2023} \\
 \textit{Röchling} \hfill \textit{France}
@@ -108,10 +110,10 @@
 
 \vspace{0.05cm}
 
-\noindent {\fontsize{12}{14}\bfseries Supervision \& SIEM (découverte)} \hfill \textbf{Test}
+\noindent {\fontsize{12}{14}\bfseries Infrastructure Multi-Systèmes (Windows/Linux)} \hfill \textbf{Réalisé}
 \begin{itemize}[leftmargin=0.5cm, noitemsep, topsep=0pt, partopsep=0pt]
-    \item Installation et prise en main de Security Onion (NSM/IDS) en environnement de test, couplée à Zabbix/Grafana.
-    \item Technologies : Zabbix, Grafana, Security Onion.
+    \item Lab AD/DNS/DHCP (Windows Server) avec GPO de sécurité, intégration de clients Linux au domaine (realmd/sssd).
+    \item RAID 1 logiciel, durcissement SSH (clé RSA + passphrase). Technologies : Active Directory, GPO, Linux, SSH.
 \end{itemize}
 
 % --- FORMATION ---
@@ -120,7 +122,12 @@
 \noindent \textbf{Mastère Cybersécurité (Bac+5)} \hfill \textbf{Rentrée Janvier 2027} \\
 \textit{IPSSI} \hfill \textit{Alternance 2 ans, rythme 3 sem. entreprise / 1 sem. école}
 
-\vspace{0.15cm}
+\vspace{0.1cm}
+
+\noindent \textbf{Bachelor Administrateur Systèmes, Réseaux \& Cybersécurité} \hfill \textbf{2024 — 2027} \\
+\textit{LiveCampus} \hfill \textit{Alternance chez Afludia}
+
+\vspace{0.1cm}
 
 \noindent \textbf{BTS SNIR (Systèmes et Réseaux Informatiques)} \hfill \textbf{2020 — 2022} \\
 \textit{Lycée Henri Loritz}
