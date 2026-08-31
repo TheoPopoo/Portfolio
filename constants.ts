@@ -14,7 +14,7 @@ export const portfolioData: PortfolioData = {
     {
       id: 1,
       title: "Cluster SQL Server sécurisé & notifications Teams",
-      images: [],
+      images: ["/assets/image/projects/cluster-sql-server.jpg"],
       description: "Déploiement d’un cluster SQL Server (haute disponibilité) avec segmentation réseau via VLAN, réalisé en contexte professionnel chez Afludia.",
       technologies: ["SQL Server", "VLAN", "PowerShell", "Microsoft Teams"],
       achievements: [
@@ -27,7 +27,7 @@ export const portfolioData: PortfolioData = {
     {
       id: 2,
       title: "Infrastructure Multi-Systèmes (Windows/Linux)",
-      images: [],
+      images: ["/assets/image/projects/infra-multi-systemes.jpg"],
       githubUrl: "https://github.com/TheoPopoo/Projets/tree/main/Infrastructure-Multi-Systemes",
       description: "Lab d’infrastructure réseau et système complète (VirtualBox), intégrant des environnements Windows et Linux interopérables.",
       technologies: ["Active Directory", "GPO", "DNS/DHCP", "Linux (realmd/sssd)", "SSH"],
@@ -42,7 +42,7 @@ export const portfolioData: PortfolioData = {
     {
       id: 6,
       title: "Plateforme d’administration distante",
-      images: [],
+      images: ["/assets/image/projects/plateforme-administration-distante.jpg"],
       description: "Interface web permettant de piloter et administrer des machines à distance via WinRM.",
       technologies: ["PowerShell", "WinRM", "Blazor", "C#"],
       achievements: [
@@ -56,7 +56,7 @@ export const portfolioData: PortfolioData = {
     {
       id: 3,
       title: "Infrastructure Docker & Services Réseau",
-      images: [],
+      images: ["/assets/image/projects/infra-docker-services-reseau.jpg"],
       description: "Déploiement de services réseau et outils via Docker dans un environnement virtualisé.",
       technologies: ["Docker", "dnsmasq", "Bitwarden", "Linux"],
       achievements: [
@@ -70,7 +70,7 @@ export const portfolioData: PortfolioData = {
     {
       id: 4,
       title: "Supervision & SIEM (découverte)",
-      images: [],
+      images: ["/assets/image/projects/supervision-siem.jpg"],
       description: "Installation et prise en main de Security Onion (NSM/IDS) en environnement de test, couplée à Zabbix/Grafana.",
       technologies: ["Zabbix", "Grafana", "Security Onion"],
       achievements: [
@@ -83,7 +83,7 @@ export const portfolioData: PortfolioData = {
     {
       id: 5,
       title: "Automatisation & Scripts IT",
-      images: [],
+      images: ["/assets/image/projects/automatisation-scripts-it.jpg"],
       description: "Développement de scripts pour automatiser les tâches IT.",
       technologies: ["PowerShell", "Python"],
       achievements: [
