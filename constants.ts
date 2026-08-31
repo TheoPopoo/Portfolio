@@ -4,9 +4,9 @@ export const portfolioData: PortfolioData = {
   personal: {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
-    status: "Recherche alternance Cybersécurité (Bac+5) — École en cours de sélection — rentrée 2027",
-    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), j'aimerais poursuivre mon parcours vers la cybersécurité (Bac+5) et je recherche actuellement mon école pour la rentrée 2027. Ma priorité est de trouver mon entreprise d'accueil en alternance. Ouvert à découvrir les différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
-    description: "Actuellement en alternance chez Afludia (Bac+3), à la recherche d’une école pour poursuivre mes études vers la cybersécurité via un Mastère en alternance (Bac+5, rentrée 2027). J’interviens sur la gestion d’infrastructures, la virtualisation, la supervision et le développement d’outils internes (PowerShell, C#, Blazor) — un socle systèmes/réseaux directement mobilisable pour la défense d’infrastructures.",
+    status: "Recherche alternance Cybersécurité (Bac+5), école en cours de sélection, rentrée 2027",
+    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), j'aimerais continuer vers la cybersécurité (Bac+5) et je cherche encore mon école pour la rentrée 2027. Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
+    description: "Actuellement en alternance chez Afludia (Bac+3), je cherche une école pour poursuivre vers la cybersécurité via un Mastère en alternance (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
 
@@ -29,7 +29,7 @@ export const portfolioData: PortfolioData = {
       title: "Infrastructure Multi-Systèmes (Windows/Linux)",
       images: ["/assets/image/projects/infra-multi-systemes.jpg"],
       githubUrl: "https://github.com/TheoPopoo/Projets/tree/main/Infrastructure-Multi-Systemes",
-      description: "Lab d’infrastructure réseau et système complète (VirtualBox), intégrant des environnements Windows et Linux interopérables.",
+      description: "Lab d’infrastructure réseau et système complète (VirtualBox), avec des environnements Windows et Linux interopérables.",
       technologies: ["Active Directory", "GPO", "DNS/DHCP", "Linux (realmd/sssd)", "SSH"],
       achievements: [
         "Déploiement AD/DNS/DHCP (Windows Server 2022) avec unités d’organisation et GPO de sécurité",
@@ -43,7 +43,7 @@ export const portfolioData: PortfolioData = {
       id: 6,
       title: "Plateforme d’administration distante",
       images: ["/assets/image/projects/plateforme-administration-distante.jpg"],
-      description: "Interface web permettant de piloter et administrer des machines à distance via WinRM.",
+      description: "Interface web pour piloter et administrer des machines à distance via WinRM.",
       technologies: ["PowerShell", "WinRM", "Blazor", "C#"],
       achievements: [
         "Exécution de scripts à distance (redémarrage, processus, déploiement)",
@@ -102,7 +102,7 @@ export const portfolioData: PortfolioData = {
         {
           degree: "Mastère Cybersécurité (Bac+5)",
           period: "Rentrée 2027",
-          description: "Recherche en cours — alternance 2 ans, entreprise d'accueil à trouver en priorité."
+          description: "Recherche en cours : alternance 2 ans, entreprise d'accueil à trouver en priorité."
         }
       ]
     },
