@@ -50,7 +50,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
     try {
       setLoadingGitHub(true);
       // Récupérer les repos de l'utilisateur GitHub
-      const response = await fetch('https://api.github.com/users/theo-poletto/repos?sort=updated&per_page=6');
+      const response = await fetch('https://api.github.com/users/TheoPopoo/repos?sort=updated&per_page=6');
       if (!response.ok) throw new Error('Failed to fetch GitHub projects');
       
       const repos = await response.json();
