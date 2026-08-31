@@ -4,9 +4,9 @@ export const portfolioData: PortfolioData = {
   personal: {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
-    status: "Recherche alternance Cybersécurité — Mastère IPSSI (Bac+5, 2 ans) — rentrée janvier 2027",
-    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Mastère Cybersécurité (Bac+5, IPSSI, 2 ans, rentrée janvier 2027) et recherche mon entreprise d'accueil. Ouvert à découvrir les différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
-    description: "Actuellement en alternance chez Afludia (Bac+3), en poursuite d’études vers la cybersécurité via un Mastère en alternance (IPSSI, 2 ans, rentrée janvier 2027). J’interviens sur la gestion d’infrastructures, la virtualisation, la supervision et le développement d’outils internes (PowerShell, C#, Blazor) — un socle systèmes/réseaux directement mobilisable pour la défense d’infrastructures.",
+    status: "Recherche alternance Cybersécurité (Bac+5) — École en cours de sélection — rentrée 2027",
+    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), j'aimerais poursuivre mon parcours vers la cybersécurité (Bac+5) et je recherche actuellement mon école pour la rentrée 2027. Ma priorité est de trouver mon entreprise d'accueil en alternance. Ouvert à découvrir les différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
+    description: "Actuellement en alternance chez Afludia (Bac+3), à la recherche d’une école pour poursuivre mes études vers la cybersécurité via un Mastère en alternance (Bac+5, rentrée 2027). J’interviens sur la gestion d’infrastructures, la virtualisation, la supervision et le développement d’outils internes (PowerShell, C#, Blazor) — un socle systèmes/réseaux directement mobilisable pour la défense d’infrastructures.",
     avatar: "/assets/image/avatar.png"
   },
 
@@ -97,12 +97,12 @@ export const portfolioData: PortfolioData = {
 
   education: [
     {
-      school: "IPSSI",
+      school: "École en cours de sélection",
       degrees: [
         {
           degree: "Mastère Cybersécurité (Bac+5)",
-          period: "Rentrée Janvier 2027",
-          description: "Alternance 2 ans, rythme 3 semaines entreprise / 1 semaine école."
+          period: "Rentrée 2027",
+          description: "Recherche en cours — alternance 2 ans, entreprise d'accueil à trouver en priorité."
         }
       ]
     },
