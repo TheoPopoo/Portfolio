@@ -26,7 +26,7 @@ interface ResumeProps {
 }
 
 interface GitHubProject {
-  id: number;
+  id: string;
   name: string;
   description: string | null;
   url: string;
@@ -49,25 +49,52 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
   const fetchGitHubProjects = async () => {
     try {
       setLoadingGitHub(true);
-      // Récupérer les repos de l'utilisateur GitHub
-      const response = await fetch('https://api.github.com/users/TheoPopoo/repos?sort=updated&per_page=6');
-      if (!response.ok) throw new Error('Failed to fetch GitHub projects');
-      
-      const repos = await response.json();
-      
-      const projects: GitHubProject[] = repos
-        .filter((repo: any) => !repo.fork && repo.description)
-        .slice(0, 5)
-        .map((repo: any) => ({
-          id: repo.id,
-          name: repo.name,
-          description: repo.description,
-          url: repo.html_url,
-          languages: repo.language ? [repo.language] : [],
-          stars: repo.stargazers_count,
-          updated_at: repo.updated_at
-        }));
-      
+      // Récupérer le contenu du repo "Projets" : chaque dossier = un projet.
+      // Ainsi, tout nouveau dossier ajouté au repo apparaît automatiquement ici.
+      const [contentsResponse, repoResponse] = await Promise.all([
+        fetch('https://api.github.com/repos/TheoPopoo/Projets/contents/'),
+        fetch('https://api.github.com/repos/TheoPopoo/Projets')
+      ]);
+      if (!contentsResponse.ok) throw new Error('Failed to fetch Projets contents');
+
+      const items = await contentsResponse.json();
+      const repoInfo = repoResponse.ok ? await repoResponse.json() : null;
+      const folders = items.filter((item: any) => item.type === 'dir');
+
+      const projects: GitHubProject[] = await Promise.all(
+        folders.map(async (folder: any) => {
+          let description: string | null = null;
+          try {
+            const readmeResponse = await fetch(`https://api.github.com/repos/TheoPopoo/Projets/contents/${folder.name}/README.md`);
+            if (readmeResponse.ok) {
+              const readmeData = await readmeResponse.json();
+              const binary = atob(readmeData.content.replace(/\n/g, ''));
+              const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+              const content = new TextDecoder('utf-8').decode(bytes);
+              const paragraph = content
+                .split('\n')
+                .map((line: string) => line.trim())
+                .find((line: string) => line.length > 30 && !line.startsWith('#') && !line.startsWith('!') && !line.startsWith('---') && !line.startsWith('|'));
+              if (paragraph) {
+                description = paragraph.length > 160 ? `${paragraph.slice(0, 157)}...` : paragraph;
+              }
+            }
+          } catch {
+            // Pas de README exploitable, la carte s'affiche sans description
+          }
+
+          return {
+            id: folder.sha,
+            name: folder.name.replace(/[-_]/g, ' '),
+            description,
+            url: folder.html_url,
+            languages: [],
+            stars: 0,
+            updated_at: repoInfo?.pushed_at || new Date().toISOString()
+          };
+        })
+      );
+
       setGitHubProjects(projects);
     } catch (error) {
       console.error('Erreur lors de la récupération des projets GitHub:', error);
