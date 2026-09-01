@@ -135,12 +135,9 @@ export const portfolioData: PortfolioData = {
       period: "Octobre 2024 - Janvier 2027",
       description: "Alternance Bac+3 : administration systèmes, réseau, sécurité et téléphonie au quotidien.",
       achievements: [
-        "Déploiement et durcissement de postes Windows 11 (SSD, images PPKG, réinstallations), mon plus gros volume d'activité",
-        "Administration réseau (VLAN, DHCP/DNS, Wifi, câblage, switchs, routeurs) et virtualisation Hyper-V",
-        "Sécurité et conformité : Patch Tuesday mensuels, suivi des CVE, gestion des accès et hardening Windows 11",
-        "Supervision d'infrastructure via Zabbix/Grafana et administration de la téléphonie VoIP (Avaya, OXE, Asterisk)",
-        "Scripts PowerShell d'automatisation (supervision de sessions, monitoring OXE, changements d'IP) et administration SQL Server (cluster Always On, requêtes Dapper)",
-        "Sauvegardes (Docker, IIS, Bitwarden), NAS Synology et serveur Docker dédié"
+        "Déploiement et durcissement de postes Windows 11, administration réseau (VLAN, DHCP/DNS, Wifi, câblage, switchs, routeurs) et virtualisation Hyper-V",
+        "Sécurité (Patch Tuesday, suivi des CVE, hardening, gestion des accès), supervision Zabbix/Grafana et téléphonie VoIP (Avaya, OXE, Asterisk)",
+        "Scripts PowerShell d'automatisation, administration SQL Server (cluster Always On, requêtes Dapper) et sauvegardes (Docker, IIS, Bitwarden, NAS Synology)"
       ]
     },
     {

@@ -215,7 +215,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
               initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.95 }}
-              className="bg-white rounded-lg shadow-2xl w-full max-w-3xl most-h-[90vh] flex flex-col"
+              className="bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center p-4 border-b border-slate-200">
@@ -247,18 +247,20 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                 </div>
               </div>
               <div className="flex-1 overflow-auto p-4">
-                <div 
+                <div
                   className="bg-white mx-auto shadow-lg will-change-transform transition-transform"
-                  style={{ 
+                  style={{
                     transform: `scale(${zoom / 100})`,
                     transformOrigin: 'top center',
-                    width: '210mm'
+                    width: '210mm',
+                    height: '297mm'
                   }}
                 >
-                  {/* Embedded CV Content Preview */}
-                  <div id="cv-preview" className="resume-container flex flex-col md:flex-row bg-white text-slate-800 w-full" style={{ width: '210mm', height: '297mm', padding: '0' }}>
-                    {/* Prévisualisation du CV avec zoom */}
-                  </div>
+                  <iframe
+                    src="/resume.pdf"
+                    title="Aperçu du CV"
+                    className="w-full h-full border-0"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -461,7 +463,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                     <p className="text-[10px] text-[#333333] leading-[1.6] mb-1.5">{exp.description}</p>
                     {exp.achievements && exp.achievements.length > 0 && (
                       <ul className="space-y-0.5 mt-1">
-                        {exp.achievements.slice(0, 2).map((ach, i) => (
+                        {exp.achievements.slice(0, 3).map((ach, i) => (
                           <li key={i} className="text-[10px] text-[#4b5563] flex items-start leading-[1.5]">
                             <span className="text-primary-500 mr-2 font-bold mt-0.5">•</span>
                             <span>{ach}</span>
