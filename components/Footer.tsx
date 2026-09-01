@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({ contact }) => {
           <div>
             <h2 className="text-3xl font-bold mb-6">Parlons de mon projet</h2>
             <p className="text-slate-400 mb-8 max-w-md text-lg">
-              Je suis actuellement à la recherche d'opportunités en CDI. N'hésitez pas à me contacter pour discuter de la façon dont je peux contribuer à votre équipe.
+              Je recherche actuellement une alternance en cybersécurité pour la rentrée 2027. N'hésitez pas à me contacter pour discuter de la façon dont je peux contribuer à votre équipe.
             </p>
             
             <div className="space-y-4">
