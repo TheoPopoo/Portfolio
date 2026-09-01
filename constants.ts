@@ -140,7 +140,7 @@ export const portfolioData: PortfolioData = {
         "Sécurité et conformité : Patch Tuesday mensuels, suivi des CVE, gestion des accès et hardening Windows 11",
         "Supervision d'infrastructure via Zabbix/Grafana et administration de la téléphonie VoIP (Avaya, OXE, Asterisk)",
         "Scripts PowerShell d'automatisation (supervision de sessions, monitoring OXE, changements d'IP) et administration SQL Server (cluster Always On, requêtes Dapper)",
-        "Sauvegardes (Docker, IIS, Bitwarden), NAS Synology et serveur Docker dédié (AFL-SRV-DOCKER)"
+        "Sauvegardes (Docker, IIS, Bitwarden), NAS Synology et serveur Docker dédié"
       ]
     },
     {
