@@ -133,11 +133,11 @@ export const portfolioData: PortfolioData = {
       position: "Administrateur Systèmes & Réseaux / Développeur (Alternance)",
       company: "Afludia",
       period: "Octobre 2024 - Janvier 2027",
-      description: "Alternance Bac+3 : plus de 300 tickets traités sur les systèmes, le réseau, la sécurité et la téléphonie.",
+      description: "Alternance Bac+3 : administration systèmes, réseau, sécurité et téléphonie au quotidien.",
       achievements: [
-        "Déploiement et durcissement de postes Windows 11 (SSD, images PPKG, réinstallations) : plus de 85 tickets, mon plus gros volume d'activité",
+        "Déploiement et durcissement de postes Windows 11 (SSD, images PPKG, réinstallations), mon plus gros volume d'activité",
         "Administration réseau (VLAN, DHCP/DNS, Wifi, câblage, switchs, routeurs) et virtualisation Hyper-V",
-        "Sécurité et conformité : Patch Tuesday mensuels, suivi des CVE, gestion des accès et hardening Windows 11 (près de 50 tickets)",
+        "Sécurité et conformité : Patch Tuesday mensuels, suivi des CVE, gestion des accès et hardening Windows 11",
         "Supervision d'infrastructure via Zabbix/Grafana et administration de la téléphonie VoIP (Avaya, OXE, Asterisk)",
         "Scripts PowerShell d'automatisation (supervision de sessions, monitoring OXE, changements d'IP) et administration SQL Server (cluster Always On, requêtes Dapper)",
         "Sauvegardes (Docker, IIS, Bitwarden), NAS Synology et serveur Docker dédié (AFL-SRV-DOCKER)"
