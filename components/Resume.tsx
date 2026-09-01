@@ -4,7 +4,6 @@
  * 
  * Fonctionnalités:
  * ✅ Génération dynamique de PDF (html2canvas + jsPDF)
- * ✅ Modal avec zoom ajustable pour aperçu du CV
  * ✅ Récupération des projets GitHub via API
  * ✅ Affichage des informations personnelles
  * ✅ Timeline formation et expérience
@@ -16,7 +15,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Mail, Phone, MapPin, Linkedin, ExternalLink, Award, Sparkles, Briefcase, GraduationCap, Target, Car, Waves, Footprints, Eye, Globe, Github, Maximize2, X, Loader } from 'lucide-react';
+import { Download, Mail, Phone, MapPin, Linkedin, ExternalLink, Award, Sparkles, Briefcase, GraduationCap, Target, Car, Waves, Footprints, Globe, Github, Loader } from 'lucide-react';
 import { PortfolioData } from '../types';
 
 const MotionDiv = motion.div as any;
@@ -36,8 +35,6 @@ interface GitHubProject {
 }
 
 export const Resume: React.FC<ResumeProps> = ({ data }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [zoom, setZoom] = useState(100);
   const [gitHubProjects, setGitHubProjects] = useState<GitHubProject[]>([]);
   const [loadingGitHub, setLoadingGitHub] = useState(false);
 
@@ -173,14 +170,6 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
               <span className="hidden md:inline">Télécharger mon CV</span>
               <span className="md:hidden">Télécharger</span>
             </button>
-            <button 
-              onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center px-6 py-3 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-all font-medium text-sm md:text-base"
-            >
-              <Eye size={18} className="mr-2" />
-              <span className="hidden md:inline">Voir en grand</span>
-              <span className="md:hidden">Voir</span>
-            </button>
           </div>
         </MotionDiv>
 
@@ -201,71 +190,6 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
             </object>
           </div>
         </div>
-
-        {/* Mobile Modal for PDF Preview */}
-        {isModalOpen && (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
-            onClick={() => setIsModalOpen(false)}
-          >
-            <motion.div 
-              initial={{ scale: 0.95 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.95 }}
-              className="bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex justify-between items-center p-4 border-b border-slate-200">
-                <h3 className="text-lg font-semibold text-slate-800">Aperçu du CV</h3>
-                <div className="flex items-center gap-2">
-                  <div className="flex gap-1">
-                    <button 
-                      onClick={() => setZoom(Math.max(50, zoom - 10))}
-                      className="p-2 hover:bg-slate-100 rounded text-sm font-medium"
-                    >
-                      −
-                    </button>
-                    <span className="px-3 py-2 bg-slate-100 rounded text-sm font-medium min-w-[60px] text-center">
-                      {zoom}%
-                    </span>
-                    <button 
-                      onClick={() => setZoom(Math.min(200, zoom + 10))}
-                      className="p-2 hover:bg-slate-100 rounded text-sm font-medium"
-                    >
-                      +
-                    </button>
-                  </div>
-                  <button 
-                    onClick={() => setIsModalOpen(false)}
-                    className="p-2 hover:bg-slate-100 rounded"
-                  >
-                    <X size={20} className="text-slate-600" />
-                  </button>
-                </div>
-              </div>
-              <div className="flex-1 overflow-auto p-4">
-                <div
-                  className="bg-white mx-auto shadow-lg will-change-transform transition-transform"
-                  style={{
-                    transform: `scale(${zoom / 100})`,
-                    transformOrigin: 'top center',
-                    width: '210mm',
-                    height: '297mm'
-                  }}
-                >
-                  <iframe
-                    src="/resume.pdf"
-                    title="Aperçu du CV"
-                    className="w-full h-full border-0"
-                  />
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
 
         {/* HIDDEN HTML CV FOR PUPPETEER PRINTING ONLY */}
         {/* CSS Reset inside cv-print-area to enforce typography */}
