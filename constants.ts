@@ -4,9 +4,9 @@ export const portfolioData: PortfolioData = {
   personal: {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
-    status: "Recherche alternance Cybersécurité (Bac+5), école en cours de sélection, rentrée 2027",
-    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), j'aimerais continuer vers la cybersécurité (Bac+5) et je cherche encore mon école pour la rentrée 2027. Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
-    description: "Actuellement en alternance chez Afludia (Bac+3), je cherche une école pour poursuivre vers la cybersécurité via un Mastère en alternance (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    status: "Recherche alternance Cybersécurité (Bac+5), Mastère IPSSI, rentrée 2027",
+    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Mastère Cybersécurité à l'IPSSI (Bac+5, rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
+    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via un Mastère en alternance à l'IPSSI (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
 
@@ -97,12 +97,12 @@ export const portfolioData: PortfolioData = {
 
   education: [
     {
-      school: "École en cours de sélection",
+      school: "IPSSI",
       degrees: [
         {
           degree: "Mastère Cybersécurité (Bac+5)",
           period: "Rentrée 2027",
-          description: "Recherche en cours : alternance 2 ans, entreprise d'accueil à trouver en priorité."
+          description: "Alternance 2 ans, entreprise d'accueil à trouver en priorité."
         }
       ]
     },
