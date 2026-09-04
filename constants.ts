@@ -251,11 +251,11 @@ export const portfolioData: PortfolioData = {
     }
   ],
 
-  hobbies: [],
+  hobbies: ["Informatique", "Cinéma", "Foot"],
 
   languages: [
-    { name: "Français", level: "Courant" },
-    { name: "Anglais", level: "Technique / professionnel" }
+    { name: "Français", level: "Langue maternelle" },
+    { name: "Anglais", level: "B2" }
   ],
 
   certifications: [
