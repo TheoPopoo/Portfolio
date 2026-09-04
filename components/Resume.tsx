@@ -131,13 +131,13 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
       
       pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-      pdf.save(`CV_Theo_Poletto_${new Date().toLocaleDateString('fr-FR')}.pdf`);
+      pdf.save('Poletto_Theo_CV.pdf');
     } catch (error) {
       console.error('Erreur lors de la génération du PDF:', error);
       // Fallback: télécharger le PDF statique si la génération échoue
       const link = document.createElement('a');
-      link.href = '/resume.pdf';
-      link.download = `CV_Theo_Poletto_${new Date().toLocaleDateString('fr-FR')}.pdf`;
+      link.href = '/Poletto_Theo_CV.pdf';
+      link.download = 'Poletto_Theo_CV.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -177,13 +177,13 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
         <div className="hidden md:block max-w-4xl mx-auto print:hidden bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200 mb-12">
           <div className="h-[800px] md:h-[900px] w-full">
             <object 
-              data="/resume.pdf" 
+              data="/Poletto_Theo_CV.pdf" 
               type="application/pdf" 
               className="w-full h-full"
             >
               <div className="p-6 text-center text-slate-600">
                 <p className="mb-4">Votre navigateur ne supporte pas la lecture de PDF.</p>
-                <a href="/resume.pdf" className="text-primary-600 underline font-semibold hover:text-primary-700">
+                <a href="/Poletto_Theo_CV.pdf" className="text-primary-600 underline font-semibold hover:text-primary-700">
                   Télécharger le CV en PDF
                 </a>
               </div>
