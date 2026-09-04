@@ -387,7 +387,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                     <p className="text-[10px] text-[#333333] leading-[1.6] mb-1.5">{exp.description}</p>
                     {exp.achievements && exp.achievements.length > 0 && (
                       <ul className="space-y-0.5 mt-1">
-                        {exp.achievements.slice(0, 3).map((ach, i) => (
+                        {exp.achievements.slice(0, 4).map((ach, i) => (
                           <li key={i} className="text-[10px] text-[#4b5563] flex items-start leading-[1.5]">
                             <span className="text-primary-500 mr-2 font-bold mt-0.5">•</span>
                             <span>{ach}</span>

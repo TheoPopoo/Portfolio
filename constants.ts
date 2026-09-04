@@ -135,9 +135,10 @@ export const portfolioData: PortfolioData = {
       period: "Octobre 2024 - Janvier 2027",
       description: "Alternance Bac+3 : administration systèmes, réseau, sécurité et téléphonie au quotidien.",
       achievements: [
-        "Déploiement et durcissement de postes Windows 11, administration réseau (VLAN, DHCP/DNS, Wifi, câblage, switchs, routeurs) et virtualisation Hyper-V",
-        "Sécurité (Patch Tuesday, suivi des CVE, hardening, gestion des accès), supervision Zabbix/Grafana et téléphonie VoIP (Avaya, OXE, Asterisk)",
-        "Scripts PowerShell d'automatisation, administration SQL Server (cluster Always On, requêtes Dapper) et sauvegardes (Docker, IIS, Bitwarden, NAS Synology)"
+        "Déploiement et durcissement de postes Windows 11 (SSD, images PPKG, réinstallations), mon plus gros volume d'activité",
+        "Administration réseau (VLAN, DHCP/DNS, Wifi, câblage, switchs, routeurs), virtualisation Hyper-V et gestion NAS Synology",
+        "Sécurité et conformité (Patch Tuesday, suivi des CVE, hardening, gestion des accès) et supervision d'infrastructure via Zabbix/Grafana",
+        "Téléphonie VoIP (Avaya, OXE, Asterisk), scripts PowerShell d'automatisation, administration SQL Server (cluster Always On, requêtes Dapper) et sauvegardes Docker"
       ]
     },
     {
@@ -150,18 +151,6 @@ export const portfolioData: PortfolioData = {
         "Administration Active Directory et System Center",
         "Supervision d’infrastructures",
         "Gestion des incidents"
-      ]
-    },
-    {
-      position: "Technicien Systèmes & Réseaux (Intérim)",
-      company: "Röchling",
-      period: "Juillet 2023",
-      description: "Mission d’intérim en support technique et déploiement de postes.",
-      achievements: [
-        "Support technique et gestion des tickets",
-        "Déploiement de postes via SCCM",
-        "Support VoIP (3CX)",
-        "Interventions réseau"
       ]
     }
   ],
