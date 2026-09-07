@@ -340,7 +340,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                 Profil & Objectif
               </h3>
               <p className="text-[#333333] leading-[1.6] text-[10.5px] border-l-[3px] border-primary-300 pl-3 py-1 font-medium">
-                "{data.personal.objective}"
+                {data.personal.objective}
               </p>
             </section>
 

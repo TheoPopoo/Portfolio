@@ -184,7 +184,7 @@ export const portfolioData: PortfolioData = {
       icon: "🔐",
       color: "from-slate-400 to-slate-500",
       skills: [
-        "Security Onion",
+        "Pfsense",
         "Zabbix",
         "Grafana",
         "Azure AD / Entra ID",
@@ -240,7 +240,7 @@ export const portfolioData: PortfolioData = {
     }
   ],
 
-  hobbies: ["Informatique", "Cinéma", "Foot"],
+  hobbies: ["Informatique", "Cinéma", "Foot", "Jeux de société"],
 
   languages: [
     { name: "Français", level: "Langue maternelle" },
