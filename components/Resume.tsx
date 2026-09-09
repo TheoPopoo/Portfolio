@@ -385,7 +385,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                     </div>
                     <p className="text-[10.5px] font-bold text-[#6b7280] mb-1">{exp.company}</p>
                     {exp.description && (
-                      <p className="text-[10px] text-[#333333] leading-[1.6] mb-1.5">{exp.description}</p>
+                      <p className="text-[10px] text-[#333333] leading-[1.6] mb-1.5 whitespace-pre-line">{exp.description}</p>
                     )}
                     {exp.achievements && exp.achievements.length > 0 && (
                       <ul className="space-y-0.5 mt-1">
@@ -397,40 +397,6 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                         ))}
                       </ul>
                     )}
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* 4. Featured Projects */}
-            <section className="mb-4">
-              <h3 className="flex items-center text-[14px] font-bold text-primary-600 mb-2 uppercase tracking-widest">
-                <ExternalLink size={14} className="mr-2" />
-                Projets & Réalisations
-              </h3>
-              <div className="space-y-1.5 pl-1.5">
-                {data.projects.slice(0, 1).map((project, idx) => (
-                  <div key={idx} className="pb-1.5 border-b border-gray-100 last:border-0 last:pb-0">
-                    <div className="flex justify-between items-center mb-1">
-                      <h4 className="font-bold text-[#1f2937] text-[11px]">
-                        {project.title}
-                      </h4>
-                      <div className="flex flex-wrap gap-1 justify-end">
-                        {project.technologies.slice(0, 4).map(t => (
-                          <span key={t} className="text-[8px] font-bold text-primary-600 bg-primary-50/50 px-1.5 py-0.5 rounded">
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                     <ul className="space-y-0.5">
-                      {project.achievements.slice(0, 2).map((ach, i) => (
-                        <li key={i} className="text-[10px] text-[#4b5563] flex items-start leading-[1.5]">
-                          <span className="text-primary-400 mr-2 font-bold mt-[1px]">▹</span>
-                          <span className="line-clamp-1">{ach}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                 ))}
               </div>

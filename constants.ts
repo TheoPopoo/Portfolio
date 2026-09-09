@@ -112,7 +112,7 @@ export const portfolioData: PortfolioData = {
         {
           degree: "Bachelor Administrateur Systèmes, Réseaux & Cybersécurité",
           period: "2024 - 2027",
-          description: "Alternance chez Afludia depuis janvier 2026 (CDI avant)."
+          description: "Alternance chez Afludia depuis janvier 2026."
         }
       ]
     },
@@ -133,7 +133,7 @@ export const portfolioData: PortfolioData = {
       position: "Administrateur Systèmes & Réseaux / Développeur",
       company: "Afludia",
       period: "Octobre 2024 - Janvier 2027",
-      description: "CDI (oct. 2024 - jan. 2026) puis alternance (jan. 2026 - jan. 2027) : systèmes, réseau, sécurité, téléphonie.",
+      description: "CDI : octobre 2024 - janvier 2026\nAlternance : janvier 2026 - janvier 2027",
       achievements: [
         "Déploiement et durcissement de postes Windows 11, administration réseau (VLAN, DHCP/DNS, Wifi, câblage, switchs, routeurs) et virtualisation Hyper-V",
         "Sécurité et conformité (Patch Tuesday, suivi des CVE, hardening, gestion des accès), supervision Zabbix/Grafana et téléphonie VoIP (Avaya, OXE, Asterisk)",
