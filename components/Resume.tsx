@@ -375,7 +375,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                 <Briefcase size={14} className="mr-2" />
                 Expériences Professionnelles
               </h3>
-              <div className="space-y-4 pl-1.5">
+              <div className="space-y-3 pl-1.5">
                 {data.experience.slice(0, 4).map((exp, idx) => (
                   <div key={idx} className="relative pl-4 border-l-2 border-primary-100">
                     <div className="absolute -left-[7px] top-1 w-3 h-3 bg-primary-600 rounded-full ring-4 ring-white"></div>

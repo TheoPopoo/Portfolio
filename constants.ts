@@ -111,7 +111,7 @@ export const portfolioData: PortfolioData = {
       degrees: [
         {
           degree: "Bachelor Administrateur Systèmes, Réseaux & Cybersécurité",
-          period: "2024 - 2027",
+          period: "2026 - 2027",
           description: "Alternance chez Afludia depuis janvier 2026."
         }
       ]
@@ -156,8 +156,10 @@ export const portfolioData: PortfolioData = {
       period: "Juillet 2023",
       description: "Mission d'un mois en support technique et déploiement de postes.",
       achievements: [
-        "Support technique et gestion des tickets, déploiement de postes via SCCM",
-        "Support VoIP (3CX) et interventions réseau"
+        "Gestion efficace des tickets de dépannage",
+        "Support technique sur une solution téléphonique innovante (3CX)",
+        "Mise en place de nouveaux postes de travail via SCCM",
+        "Tâches de câblage pour les équipements"
       ]
     },
     {
@@ -166,8 +168,10 @@ export const portfolioData: PortfolioData = {
       period: "Octobre 2022 - Février 2023",
       description: "Alternance de 5 mois en administration réseau et systèmes.",
       achievements: [
-        "Mise en place de nouveaux postes de travail via SCCM",
-        "Câblage des équipements réseau"
+        "Mise en place d'un outil de gestion du parc informatique (GLPI)",
+        "Déploiement de PC pour agents via serveur SCCM",
+        "Configuration et installation du matériel",
+        "Virtualisation de serveurs"
       ]
     }
   ],
