@@ -376,7 +376,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                 Expériences Professionnelles
               </h3>
               <div className="space-y-4 pl-1.5">
-                {data.experience.slice(0, 3).map((exp, idx) => (
+                {data.experience.slice(0, 4).map((exp, idx) => (
                   <div key={idx} className="relative pl-4 border-l-2 border-primary-100">
                     <div className="absolute -left-[7px] top-1 w-3 h-3 bg-primary-600 rounded-full ring-4 ring-white"></div>
                     <div className="flex justify-between items-baseline mb-0.5">
@@ -384,10 +384,12 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                       <span className="text-[8.5px] font-bold text-primary-700 uppercase bg-primary-50 px-2 py-0.5 rounded-md min-w-max ml-3">{exp.period}</span>
                     </div>
                     <p className="text-[10.5px] font-bold text-[#6b7280] mb-1">{exp.company}</p>
-                    <p className="text-[10px] text-[#333333] leading-[1.6] mb-1.5">{exp.description}</p>
+                    {exp.description && (
+                      <p className="text-[10px] text-[#333333] leading-[1.6] mb-1.5">{exp.description}</p>
+                    )}
                     {exp.achievements && exp.achievements.length > 0 && (
                       <ul className="space-y-0.5 mt-1">
-                        {exp.achievements.slice(0, 4).map((ach, i) => (
+                        {exp.achievements.slice(0, 3).map((ach, i) => (
                           <li key={i} className="text-[10px] text-[#4b5563] flex items-start leading-[1.5]">
                             <span className="text-primary-500 mr-2 font-bold mt-0.5">•</span>
                             <span>{ach}</span>
@@ -407,7 +409,7 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
                 Projets & Réalisations
               </h3>
               <div className="space-y-1.5 pl-1.5">
-                {data.projects.slice(0, 3).map((project, idx) => (
+                {data.projects.slice(0, 1).map((project, idx) => (
                   <div key={idx} className="pb-1.5 border-b border-gray-100 last:border-0 last:pb-0">
                     <div className="flex justify-between items-center mb-1">
                       <h4 className="font-bold text-[#1f2937] text-[11px]">

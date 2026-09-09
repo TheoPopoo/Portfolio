@@ -102,7 +102,7 @@ export const portfolioData: PortfolioData = {
         {
           degree: "Mastère Cybersécurité (Bac+5)",
           period: "Rentrée 2027",
-          description: "Alternance 2 ans, entreprise d'accueil à trouver en priorité."
+          description: "Alternance 2 ans."
         }
       ]
     },
@@ -112,7 +112,7 @@ export const portfolioData: PortfolioData = {
         {
           degree: "Bachelor Administrateur Systèmes, Réseaux & Cybersécurité",
           period: "2024 - 2027",
-          description: "En alternance chez Afludia."
+          description: "Alternance chez Afludia depuis janvier 2026 (CDI avant)."
         }
       ]
     },
@@ -130,27 +130,44 @@ export const portfolioData: PortfolioData = {
 
   experience: [
     {
-      position: "Administrateur Systèmes & Réseaux / Développeur (Alternance)",
+      position: "Administrateur Systèmes & Réseaux / Développeur",
       company: "Afludia",
       period: "Octobre 2024 - Janvier 2027",
-      description: "Alternance Bac+3 : administration systèmes, réseau, sécurité et téléphonie au quotidien.",
+      description: "CDI (oct. 2024 - jan. 2026) puis alternance (jan. 2026 - jan. 2027) : systèmes, réseau, sécurité, téléphonie.",
       achievements: [
-        "Déploiement et durcissement de postes Windows 11 (SSD, images PPKG, réinstallations), mon plus gros volume d'activité",
-        "Administration réseau (VLAN, DHCP/DNS, Wifi, câblage, switchs, routeurs), virtualisation Hyper-V et gestion NAS Synology",
-        "Sécurité et conformité (Patch Tuesday, suivi des CVE, hardening, gestion des accès) et supervision d'infrastructure via Zabbix/Grafana",
-        "Téléphonie VoIP (Avaya, OXE, Asterisk), scripts PowerShell d'automatisation, administration SQL Server (cluster Always On, requêtes Dapper) et sauvegardes Docker"
+        "Déploiement et durcissement de postes Windows 11, administration réseau (VLAN, DHCP/DNS, Wifi, câblage, switchs, routeurs) et virtualisation Hyper-V",
+        "Sécurité et conformité (Patch Tuesday, suivi des CVE, hardening, gestion des accès), supervision Zabbix/Grafana et téléphonie VoIP (Avaya, OXE, Asterisk)",
+        "Scripts PowerShell d'automatisation, administration SQL Server (cluster Always On, requêtes Dapper) et sauvegardes (Docker, IIS, Bitwarden, NAS Synology)"
       ]
     },
     {
-      position: "Administrateur Système",
+      position: "Administrateur Système (CDD)",
       company: "ArcelorMittal",
       period: "Juin 2024 - Septembre 2024",
       description: "Administration et sécurisation des accès sur un parc de serveurs physiques et virtuels.",
       achievements: [
-        "Déploiement de serveurs physiques et virtuels",
-        "Administration Active Directory et System Center",
-        "Supervision d’infrastructures",
-        "Gestion des incidents"
+        "Déploiement de serveurs physiques et virtuels, administration Active Directory et System Center",
+        "Supervision d'infrastructures et gestion des incidents"
+      ]
+    },
+    {
+      position: "Technicien Réseau & Helpdesk (CDD)",
+      company: "Röchling Group",
+      period: "Juillet 2023",
+      description: "Mission d'un mois en support technique et déploiement de postes.",
+      achievements: [
+        "Support technique et gestion des tickets, déploiement de postes via SCCM",
+        "Support VoIP (3CX) et interventions réseau"
+      ]
+    },
+    {
+      position: "Administrateur Réseau et Systèmes (Alternance)",
+      company: "AFTRAL",
+      period: "Octobre 2022 - Février 2023",
+      description: "Alternance de 5 mois en administration réseau et systèmes.",
+      achievements: [
+        "Mise en place de nouveaux postes de travail via SCCM",
+        "Câblage des équipements réseau"
       ]
     }
   ],
