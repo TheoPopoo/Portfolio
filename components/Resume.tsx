@@ -17,11 +17,19 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Mail, Phone, MapPin, Linkedin, ExternalLink, Award, Sparkles, Briefcase, GraduationCap, Target, Car, Waves, Footprints, Globe, Github, Loader } from 'lucide-react';
 import { PortfolioData } from '../types';
+import { CVVariant } from '../constants';
 
 const MotionDiv = motion.div as any;
 
+const CV_FILENAMES: Record<CVVariant, string> = {
+  'alternance-ipssi': 'Poletto_Theo_CV_Alternance_IPSSI.pdf',
+  'alternance-eni': 'Poletto_Theo_CV_Alternance_ENI.pdf',
+  'cdi': 'Poletto_Theo_CV_CDI.pdf'
+};
+
 interface ResumeProps {
   data: PortfolioData;
+  variant: CVVariant;
 }
 
 interface GitHubProject {
@@ -34,7 +42,8 @@ interface GitHubProject {
   updated_at: string;
 }
 
-export const Resume: React.FC<ResumeProps> = ({ data }) => {
+export const Resume: React.FC<ResumeProps> = ({ data, variant }) => {
+  const cvFilename = CV_FILENAMES[variant];
   const [gitHubProjects, setGitHubProjects] = useState<GitHubProject[]>([]);
   const [loadingGitHub, setLoadingGitHub] = useState(false);
 
@@ -131,13 +140,13 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
       
       pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-      pdf.save('Poletto_Theo_CV.pdf');
+      pdf.save(cvFilename);
     } catch (error) {
       console.error('Erreur lors de la génération du PDF:', error);
       // Fallback: télécharger le PDF statique si la génération échoue
       const link = document.createElement('a');
-      link.href = '/Poletto_Theo_CV.pdf';
-      link.download = 'Poletto_Theo_CV.pdf';
+      link.href = `/${cvFilename}`;
+      link.download = cvFilename;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -176,14 +185,14 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
         {/* NATIVE PDF VIEWER FOR DESKTOP */}
         <div className="hidden md:block max-w-4xl mx-auto print:hidden bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200 mb-12">
           <div className="h-[800px] md:h-[900px] w-full">
-            <object 
-              data="/Poletto_Theo_CV.pdf" 
-              type="application/pdf" 
+            <object
+              data={`/${cvFilename}`}
+              type="application/pdf"
               className="w-full h-full"
             >
               <div className="p-6 text-center text-slate-600">
                 <p className="mb-4">Votre navigateur ne supporte pas la lecture de PDF.</p>
-                <a href="/Poletto_Theo_CV.pdf" className="text-primary-600 underline font-semibold hover:text-primary-700">
+                <a href={`/${cvFilename}`} className="text-primary-600 underline font-semibold hover:text-primary-700">
                   Télécharger le CV en PDF
                 </a>
               </div>
@@ -206,15 +215,15 @@ export const Resume: React.FC<ResumeProps> = ({ data }) => {
             <div>
               {/* QR Code Section -> Made Clickable */}
               <div className="flex flex-col items-center mb-4">
-                <a href="https://poletto-theo.vercel.app/" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-xl mb-2 hover:shadow-md transition-shadow block cursor-pointer border border-slate-200">
-                  <img 
-                    src={`https://api.qrserver.com/v1/create-qr-code/?size=55x55&data=https://poletto-theo.vercel.app/&bgcolor=ffffff&color=0f172a`}
+                <a href={`https://poletto-theo.vercel.app/${variant}`} target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-xl mb-2 hover:shadow-md transition-shadow block cursor-pointer border border-slate-200">
+                  <img
+                    src={`https://api.qrserver.com/v1/create-qr-code/?size=55x55&data=https://poletto-theo.vercel.app/${variant}&bgcolor=ffffff&color=0f172a`}
                     alt="QR Code Portfolio"
                     className="w-[55px] h-[55px]"
                   />
                 </a>
-                <a href="https://poletto-theo.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-600 hover:text-slate-900 font-medium tracking-wide">
-                  poletto-theo.vercel.app
+                <a href={`https://poletto-theo.vercel.app/${variant}`} target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-600 hover:text-slate-900 font-medium tracking-wide">
+                  poletto-theo.vercel.app/{variant}
                 </a>
               </div>
 

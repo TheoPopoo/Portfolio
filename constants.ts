@@ -1,103 +1,236 @@
-import { PortfolioData } from './types';
+import { PortfolioData, Education } from './types';
 
-export const portfolioData: PortfolioData = {
-  personal: {
-    name: "Theo Poletto",
-    title: "Administrateur Systèmes & Réseaux",
-    status: "Recherche alternance Cybersécurité (Bac+5), Mastère IPSSI, rentrée 2027",
-    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Mastère Cybersécurité à l'IPSSI (Bac+5, rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
-    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via un Mastère en alternance à l'IPSSI (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
-    avatar: "/assets/image/avatar.png"
+export type CVVariant = 'alternance-ipssi' | 'alternance-eni' | 'cdi';
+
+export const CV_VARIANTS: CVVariant[] = ['alternance-ipssi', 'alternance-eni', 'cdi'];
+
+const projects = [
+  {
+    id: 1,
+    title: "Cluster SQL Server sécurisé & notifications Teams",
+    images: ["/assets/image/projects/cluster-sql-server.jpg"],
+    description: "Déploiement d’un cluster SQL Server (haute disponibilité) avec segmentation réseau via VLAN, réalisé en contexte professionnel chez Afludia.",
+    technologies: ["SQL Server", "VLAN", "PowerShell", "Microsoft Teams"],
+    achievements: [
+      "Déploiement et configuration d’un cluster SQL Server pour la haute disponibilité",
+      "Segmentation réseau via VLAN pour sécuriser l’accès aux bases de données",
+      "Notifications automatisées (alertes) via webhooks Microsoft Teams"
+    ]
   },
 
-  projects: [
-    {
-      id: 1,
-      title: "Cluster SQL Server sécurisé & notifications Teams",
-      images: ["/assets/image/projects/cluster-sql-server.jpg"],
-      description: "Déploiement d’un cluster SQL Server (haute disponibilité) avec segmentation réseau via VLAN, réalisé en contexte professionnel chez Afludia.",
-      technologies: ["SQL Server", "VLAN", "PowerShell", "Microsoft Teams"],
-      achievements: [
-        "Déploiement et configuration d’un cluster SQL Server pour la haute disponibilité",
-        "Segmentation réseau via VLAN pour sécuriser l’accès aux bases de données",
-        "Notifications automatisées (alertes) via webhooks Microsoft Teams"
-      ]
-    },
+  {
+    id: 2,
+    title: "Infrastructure Multi-Systèmes (Windows/Linux)",
+    images: ["/assets/image/projects/infra-multi-systemes.jpg"],
+    githubUrl: "https://github.com/TheoPopoo/Projets/tree/main/Infrastructure-Multi-Systemes",
+    description: "Lab d’infrastructure réseau et système complète (VirtualBox), avec des environnements Windows et Linux interopérables.",
+    technologies: ["Active Directory", "GPO", "DNS/DHCP", "Linux (realmd/sssd)", "SSH"],
+    achievements: [
+      "Déploiement AD/DNS/DHCP (Windows Server 2022) avec unités d’organisation et GPO de sécurité",
+      "Intégration de clients Linux au domaine Active Directory via realmd/sssd",
+      "Tolérance aux pannes via RAID 1 logiciel sur les disques serveur",
+      "Durcissement SSH par authentification par clé RSA (passphrase) et administration web via Cockpit"
+    ]
+  },
 
-    {
-      id: 2,
-      title: "Infrastructure Multi-Systèmes (Windows/Linux)",
-      images: ["/assets/image/projects/infra-multi-systemes.jpg"],
-      githubUrl: "https://github.com/TheoPopoo/Projets/tree/main/Infrastructure-Multi-Systemes",
-      description: "Lab d’infrastructure réseau et système complète (VirtualBox), avec des environnements Windows et Linux interopérables.",
-      technologies: ["Active Directory", "GPO", "DNS/DHCP", "Linux (realmd/sssd)", "SSH"],
-      achievements: [
-        "Déploiement AD/DNS/DHCP (Windows Server 2022) avec unités d’organisation et GPO de sécurité",
-        "Intégration de clients Linux au domaine Active Directory via realmd/sssd",
-        "Tolérance aux pannes via RAID 1 logiciel sur les disques serveur",
-        "Durcissement SSH par authentification par clé RSA (passphrase) et administration web via Cockpit"
-      ]
-    },
+  {
+    id: 6,
+    title: "Plateforme d’administration distante",
+    images: ["/assets/image/projects/plateforme-administration-distante.jpg"],
+    description: "Interface web pour piloter et administrer des machines à distance via WinRM.",
+    technologies: ["PowerShell", "WinRM", "Blazor", "C#"],
+    achievements: [
+      "Exécution de scripts à distance (redémarrage, processus, déploiement)",
+      "Gestion multi-machines via interface web",
+      "Centralisation des actions d’administration",
+      "Retour en temps réel des exécutions"
+    ]
+  },
 
-    {
-      id: 6,
-      title: "Plateforme d’administration distante",
-      images: ["/assets/image/projects/plateforme-administration-distante.jpg"],
-      description: "Interface web pour piloter et administrer des machines à distance via WinRM.",
-      technologies: ["PowerShell", "WinRM", "Blazor", "C#"],
-      achievements: [
-        "Exécution de scripts à distance (redémarrage, processus, déploiement)",
-        "Gestion multi-machines via interface web",
-        "Centralisation des actions d’administration",
-        "Retour en temps réel des exécutions"
-      ]
-    },
+  {
+    id: 3,
+    title: "Infrastructure Docker & Services Réseau",
+    images: ["/assets/image/projects/infra-docker-services-reseau.jpg"],
+    description: "Déploiement de services réseau et outils via Docker dans un environnement virtualisé.",
+    technologies: ["Docker", "dnsmasq", "Bitwarden", "Linux"],
+    achievements: [
+      "Déploiement de services réseau conteneurisés",
+      "Gestion DNS avec dnsmasq",
+      "Mise en place d’un gestionnaire de mots de passe sécurisé (Bitwarden)",
+      "Optimisation des services en environnement virtualisé"
+    ]
+  },
 
-    {
-      id: 3,
-      title: "Infrastructure Docker & Services Réseau",
-      images: ["/assets/image/projects/infra-docker-services-reseau.jpg"],
-      description: "Déploiement de services réseau et outils via Docker dans un environnement virtualisé.",
-      technologies: ["Docker", "dnsmasq", "Bitwarden", "Linux"],
-      achievements: [
-        "Déploiement de services réseau conteneurisés",
-        "Gestion DNS avec dnsmasq",
-        "Mise en place d’un gestionnaire de mots de passe sécurisé (Bitwarden)",
-        "Optimisation des services en environnement virtualisé"
-      ]
-    },
+  {
+    id: 4,
+    title: "Supervision & SIEM (découverte)",
+    images: ["/assets/image/projects/supervision-siem.jpg"],
+    description: "Installation et prise en main de Security Onion (NSM/IDS) en environnement de test, couplée à Zabbix/Grafana.",
+    technologies: ["Zabbix", "Grafana", "Security Onion"],
+    achievements: [
+      "Installation et configuration de Security Onion en environnement de test",
+      "Supervision associée via Zabbix/Grafana",
+      "Première approche des concepts NSM/IDS et centralisation des logs"
+    ]
+  },
 
-    {
-      id: 4,
-      title: "Supervision & SIEM (découverte)",
-      images: ["/assets/image/projects/supervision-siem.jpg"],
-      description: "Installation et prise en main de Security Onion (NSM/IDS) en environnement de test, couplée à Zabbix/Grafana.",
-      technologies: ["Zabbix", "Grafana", "Security Onion"],
-      achievements: [
-        "Installation et configuration de Security Onion en environnement de test",
-        "Supervision associée via Zabbix/Grafana",
-        "Première approche des concepts NSM/IDS et centralisation des logs"
-      ]
-    },
+  {
+    id: 5,
+    title: "Automatisation & Scripts IT",
+    images: ["/assets/image/projects/automatisation-scripts-it.jpg"],
+    description: "Développement de scripts pour automatiser les tâches IT.",
+    technologies: ["PowerShell", "Python"],
+    achievements: [
+      "Automatisation des mises à jour Windows",
+      "Déploiement d’applications à distance",
+      "Gestion des machines via WinRM",
+      "Gain de temps significatif sur les tâches récurrentes"
+    ]
+  }
+];
 
-    {
-      id: 5,
-      title: "Automatisation & Scripts IT",
-      images: ["/assets/image/projects/automatisation-scripts-it.jpg"],
-      description: "Développement de scripts pour automatiser les tâches IT.",
-      technologies: ["PowerShell", "Python"],
-      achievements: [
-        "Automatisation des mises à jour Windows",
-        "Déploiement d’applications à distance",
-        "Gestion des machines via WinRM",
-        "Gain de temps significatif sur les tâches récurrentes"
-      ]
-    }
-  ],
+const experience = [
+  {
+    position: "Administrateur Systèmes & Réseaux / Développeur",
+    company: "Afludia",
+    period: "Octobre 2024 - Janvier 2027",
+    description: "CDI : octobre 2024 - janvier 2026\nAlternance : janvier 2026 - janvier 2027",
+    achievements: [
+      "Déploiement et durcissement de postes Windows 11, administration réseau (VLAN, DHCP/DNS, Wifi, câblage, switchs, routeurs) et virtualisation Hyper-V",
+      "Sécurité et conformité (Patch Tuesday, suivi des CVE, hardening, gestion des accès), supervision Zabbix/Grafana et téléphonie VoIP (Avaya, OXE, Asterisk)",
+      "Scripts PowerShell d'automatisation, administration SQL Server (cluster Always On, requêtes Dapper) et sauvegardes (Docker, IIS, Bitwarden, NAS Synology)"
+    ]
+  },
+  {
+    position: "Administrateur Système (CDD)",
+    company: "ArcelorMittal",
+    period: "Juin 2024 - Septembre 2024",
+    description: "Administration et sécurisation des accès sur un parc de serveurs physiques et virtuels.",
+    achievements: [
+      "Déploiement de serveurs physiques et virtuels, administration Active Directory et System Center",
+      "Supervision d'infrastructures et gestion des incidents"
+    ]
+  },
+  {
+    position: "Technicien Réseau & Helpdesk (CDD)",
+    company: "Röchling Group",
+    period: "Juillet 2023",
+    description: "Mission d'un mois en support technique et déploiement de postes.",
+    achievements: [
+      "Gestion efficace des tickets de dépannage",
+      "Support technique sur une solution téléphonique innovante (3CX)",
+      "Mise en place de nouveaux postes de travail via SCCM",
+      "Tâches de câblage pour les équipements"
+    ]
+  },
+  {
+    position: "Administrateur Réseau et Systèmes (Alternance)",
+    company: "AFTRAL",
+    period: "Octobre 2022 - Février 2023",
+    description: "Alternance de 5 mois en administration réseau et systèmes.",
+    achievements: [
+      "Mise en place d'un outil de gestion du parc informatique (GLPI)",
+      "Déploiement de PC pour agents via serveur SCCM",
+      "Configuration et installation du matériel",
+      "Virtualisation de serveurs"
+    ]
+  }
+];
 
-  education: [
+const contact = {
+  email: "theopoleto54@gmail.com",
+  phone: "06 95 84 99 70",
+  linkedin: "https://www.linkedin.com/in/theo-poletto/",
+  github: "https://github.com/TheoPopoo",
+  location: "Nancy et alentours"
+};
+
+const skills = [
+  "Windows Server",
+  "Linux",
+  "Active Directory",
+  "PowerShell",
+  "Docker",
+  "Proxmox",
+  "VMware",
+  "Zabbix",
+  "Grafana",
+  "Security",
+  "Réseaux",
+  "Virtualisation"
+];
+
+const skillCategories = [
+  {
+    category: "Cybersécurité & Supervision",
+    icon: "🔐",
+    color: "from-slate-400 to-slate-500",
+    skills: ["Pfsense", "Zabbix", "Grafana", "Azure AD / Entra ID", "VLAN"]
+  },
+  {
+    category: "Systèmes",
+    icon: "🖥️",
+    color: "from-slate-400 to-slate-500",
+    skills: ["Windows Server", "Linux", "Active Directory", "Hyper-V", "Proxmox"]
+  },
+  {
+    category: "Réseaux",
+    icon: "🌐",
+    color: "from-slate-400 to-slate-500",
+    skills: ["VLAN", "DHCP", "DNS", "NAT", "Routage"]
+  },
+  {
+    category: "Automatisation",
+    icon: "⚙️",
+    color: "from-slate-400 to-slate-500",
+    skills: ["PowerShell", "WinRM", "Scripting", "Python"]
+  },
+  {
+    category: "Dev & Outils",
+    icon: "💻",
+    color: "from-slate-400 to-slate-500",
+    skills: ["C#", ".NET", "Blazor", "SQL Server", "Git"]
+  }
+];
+
+const hobbies = ["Informatique", "Cinéma", "Foot", "Jeux de société"];
+
+const languages = [
+  { name: "Français", level: "Langue maternelle" },
+  { name: "Anglais", level: "B2" }
+];
+
+const certifications = [
+  { name: "CCNA 1", issuer: "Cisco", date: "Obtenu" }
+];
+
+const livecampusAndLycee: Education[] = [
+  {
+    school: "LiveCampus",
+    degrees: [
+      {
+        degree: "Bachelor Administrateur Systèmes, Réseaux & Cybersécurité",
+        period: "2026 - 2027",
+        description: "Alternance chez Afludia depuis janvier 2026."
+      }
+    ]
+  },
+  {
+    school: "Lycée Henri Loritz",
+    degrees: [
+      {
+        degree: "BTS SNIR",
+        period: "2020 - 2022",
+        description: "Spécialisation systèmes et réseaux, administration, développement et infrastructures."
+      }
+    ]
+  }
+];
+
+function alternanceEducation(school: string): Education[] {
+  return [
     {
-      school: "IPSSI",
+      school,
       degrees: [
         {
           degree: "Mastère Cybersécurité (Bac+5)",
@@ -106,169 +239,53 @@ export const portfolioData: PortfolioData = {
         }
       ]
     },
-    {
-      school: "LiveCampus",
-      degrees: [
-        {
-          degree: "Bachelor Administrateur Systèmes, Réseaux & Cybersécurité",
-          period: "2026 - 2027",
-          description: "Alternance chez Afludia depuis janvier 2026."
-        }
-      ]
-    },
-    {
-      school: "Lycée Henri Loritz",
-      degrees: [
-        {
-          degree: "BTS SNIR",
-          period: "2020 - 2022",
-          description: "Spécialisation systèmes et réseaux, administration, développement et infrastructures."
-        }
-      ]
-    }
-  ],
+    ...livecampusAndLycee
+  ];
+}
 
-  experience: [
-    {
-      position: "Administrateur Systèmes & Réseaux / Développeur",
-      company: "Afludia",
-      period: "Octobre 2024 - Janvier 2027",
-      description: "CDI : octobre 2024 - janvier 2026\nAlternance : janvier 2026 - janvier 2027",
-      achievements: [
-        "Déploiement et durcissement de postes Windows 11, administration réseau (VLAN, DHCP/DNS, Wifi, câblage, switchs, routeurs) et virtualisation Hyper-V",
-        "Sécurité et conformité (Patch Tuesday, suivi des CVE, hardening, gestion des accès), supervision Zabbix/Grafana et téléphonie VoIP (Avaya, OXE, Asterisk)",
-        "Scripts PowerShell d'automatisation, administration SQL Server (cluster Always On, requêtes Dapper) et sauvegardes (Docker, IIS, Bitwarden, NAS Synology)"
-      ]
-    },
-    {
-      position: "Administrateur Système (CDD)",
-      company: "ArcelorMittal",
-      period: "Juin 2024 - Septembre 2024",
-      description: "Administration et sécurisation des accès sur un parc de serveurs physiques et virtuels.",
-      achievements: [
-        "Déploiement de serveurs physiques et virtuels, administration Active Directory et System Center",
-        "Supervision d'infrastructures et gestion des incidents"
-      ]
-    },
-    {
-      position: "Technicien Réseau & Helpdesk (CDD)",
-      company: "Röchling Group",
-      period: "Juillet 2023",
-      description: "Mission d'un mois en support technique et déploiement de postes.",
-      achievements: [
-        "Gestion efficace des tickets de dépannage",
-        "Support technique sur une solution téléphonique innovante (3CX)",
-        "Mise en place de nouveaux postes de travail via SCCM",
-        "Tâches de câblage pour les équipements"
-      ]
-    },
-    {
-      position: "Administrateur Réseau et Systèmes (Alternance)",
-      company: "AFTRAL",
-      period: "Octobre 2022 - Février 2023",
-      description: "Alternance de 5 mois en administration réseau et systèmes.",
-      achievements: [
-        "Mise en place d'un outil de gestion du parc informatique (GLPI)",
-        "Déploiement de PC pour agents via serveur SCCM",
-        "Configuration et installation du matériel",
-        "Virtualisation de serveurs"
-      ]
-    }
-  ],
+const shared = { projects, experience, contact, skills, skillCategories, hobbies, languages, certifications };
 
-  contact: {
-    email: "theopoleto54@gmail.com",
-    phone: "06 95 84 99 70",
-    linkedin: "https://www.linkedin.com/in/theo-poletto/",
-    github: "https://github.com/TheoPopoo",
-    location: "Nancy et alentours"
+const alternanceIpssiData: PortfolioData = {
+  ...shared,
+  personal: {
+    name: "Theo Poletto",
+    title: "Administrateur Systèmes & Réseaux",
+    status: "Recherche alternance Cybersécurité (Bac+5), Mastère IPSSI, rentrée 2027",
+    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Mastère Cybersécurité à l'IPSSI (Bac+5, rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
+    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via un Mastère en alternance à l'IPSSI (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    avatar: "/assets/image/avatar.png"
   },
+  education: alternanceEducation("IPSSI")
+};
 
-  skills: [
-    "Windows Server",
-    "Linux",
-    "Active Directory",
-    "PowerShell",
-    "Docker",
-    "Proxmox",
-    "VMware",
-    "Zabbix",
-    "Grafana",
-    "Security",
-    "Réseaux",
-    "Virtualisation"
-  ],
+const alternanceEniData: PortfolioData = {
+  ...shared,
+  personal: {
+    name: "Theo Poletto",
+    title: "Administrateur Systèmes & Réseaux",
+    status: "Recherche alternance Cybersécurité (Bac+5), Mastère ENI École Informatique, rentrée 2027",
+    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Mastère Cybersécurité à l'ENI École Informatique (Bac+5, rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
+    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via un Mastère en alternance à l'ENI École Informatique (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    avatar: "/assets/image/avatar.png"
+  },
+  education: alternanceEducation("ENI École Informatique")
+};
 
-  skillCategories: [
-    {
-      category: "Cybersécurité & Supervision",
-      icon: "🔐",
-      color: "from-slate-400 to-slate-500",
-      skills: [
-        "Pfsense",
-        "Zabbix",
-        "Grafana",
-        "Azure AD / Entra ID",
-        "VLAN"
-      ]
-    },
-    {
-      category: "Systèmes",
-      icon: "🖥️",
-      color: "from-slate-400 to-slate-500",
-      skills: [
-        "Windows Server",
-        "Linux",
-        "Active Directory",
-        "Hyper-V",
-        "Proxmox"
-      ]
-    },
-    {
-      category: "Réseaux",
-      icon: "🌐",
-      color: "from-slate-400 to-slate-500",
-      skills: [
-        "VLAN",
-        "DHCP",
-        "DNS",
-        "NAT",
-        "Routage"
-      ]
-    },
-    {
-      category: "Automatisation",
-      icon: "⚙️",
-      color: "from-slate-400 to-slate-500",
-      skills: [
-        "PowerShell",
-        "WinRM",
-        "Scripting",
-        "Python"
-      ]
-    },
-    {
-      category: "Dev & Outils",
-      icon: "💻",
-      color: "from-slate-400 to-slate-500",
-      skills: [
-        "C#",
-        ".NET",
-        "Blazor",
-        "SQL Server",
-        "Git"
-      ]
-    }
-  ],
+const cdiData: PortfolioData = {
+  ...shared,
+  personal: {
+    name: "Theo Poletto",
+    title: "Administrateur Systèmes & Réseaux",
+    status: "Recherche un poste d'Administrateur Systèmes & Réseaux (CDI), disponible à partir de janvier 2027",
+    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je recherche un poste d'Administrateur Systèmes & Réseaux en CDI, disponible à partir de janvier 2027. J'aime la polyvalence entre l'administration systèmes, réseau et le développement d'outils internes.",
+    description: "Actuellement en alternance chez Afludia (Bac+3), je recherche un poste en CDI d'Administrateur Systèmes & Réseaux à partir de janvier 2027. Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    avatar: "/assets/image/avatar.png"
+  },
+  education: livecampusAndLycee
+};
 
-  hobbies: ["Informatique", "Cinéma", "Foot", "Jeux de société"],
-
-  languages: [
-    { name: "Français", level: "Langue maternelle" },
-    { name: "Anglais", level: "B2" }
-  ],
-
-  certifications: [
-    { name: "CCNA 1", issuer: "Cisco", date: "Obtenu" }
-  ]
+export const portfolioDataByVariant: Record<CVVariant, PortfolioData> = {
+  "alternance-ipssi": alternanceIpssiData,
+  "alternance-eni": alternanceEniData,
+  "cdi": cdiData
 };
