@@ -229,14 +229,14 @@ const livecampusAndLycee: Education[] = [
   }
 ];
 
-function alternanceEducation(school: string, logo: string): Education[] {
+function alternanceEducation(school: string, logo: string, degreeName: string): Education[] {
   return [
     {
       school,
       logo,
       degrees: [
         {
-          degree: "Master Sécurité des Systèmes d'Information (Bac+5)",
+          degree: degreeName,
           period: "Rentrée 2027",
           description: "Alternance 2 ans (4j entreprise, 1j école à définir avec l'entreprise)."
         }
@@ -253,12 +253,12 @@ const alternanceIpssiData: PortfolioData = {
   personal: {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
-    status: "Recherche alternance Master Sécurité des Systèmes d'Information (Bac+5), IPSSI, rentrée 2027",
-    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Master Sécurité des Systèmes d'Information à l'IPSSI (Bac+5, rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
-    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via un Master Sécurité des Systèmes d'Information en alternance à l'IPSSI (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    status: "Recherche alternance Cybersécurité (Bac+5), Mastère IPSSI, rentrée 2027",
+    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Mastère Cybersécurité à l'IPSSI (Bac+5, rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
+    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via un Mastère en alternance à l'IPSSI (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
-  education: alternanceEducation("IPSSI", "/assets/image/schools/ipssi.png")
+  education: alternanceEducation("IPSSI", "/assets/image/schools/ipssi.png", "Mastère Cybersécurité (Bac+5)")
 };
 
 const alternanceEniData: PortfolioData = {
@@ -266,12 +266,12 @@ const alternanceEniData: PortfolioData = {
   personal: {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
-    status: "Recherche alternance Master Sécurité des Systèmes d'Information (Bac+5), ENI École Informatique, rentrée 2027",
-    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Master Sécurité des Systèmes d'Information à l'ENI École Informatique (Bac+5, rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
-    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via un Master Sécurité des Systèmes d'Information en alternance à l'ENI École Informatique (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    status: "Recherche alternance Cybersécurité (Bac+5), Mastère ENI École Informatique, rentrée 2027",
+    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Mastère Cybersécurité à l'ENI École Informatique (Bac+5, rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
+    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via un Mastère en alternance à l'ENI École Informatique (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
-  education: alternanceEducation("ENI École Informatique", "/assets/image/schools/eni.png")
+  education: alternanceEducation("ENI École Informatique", "/assets/image/schools/eni.png", "Mastère Cybersécurité (Bac+5)")
 };
 
 const alternanceOpenClassroomsData: PortfolioData = {
@@ -284,7 +284,7 @@ const alternanceOpenClassroomsData: PortfolioData = {
     description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via un Master Sécurité des Systèmes d'Information en alternance chez OpenClassrooms (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
-  education: alternanceEducation("OpenClassrooms", "/assets/image/schools/openclassrooms.png")
+  education: alternanceEducation("OpenClassrooms", "/assets/image/schools/openclassrooms.png", "Master Sécurité des Systèmes d'Information (Bac+5)")
 };
 
 const cdiData: PortfolioData = {
