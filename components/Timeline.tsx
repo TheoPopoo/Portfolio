@@ -62,7 +62,8 @@ export const Timeline: React.FC<TimelineProps> = ({ education, experience }) => 
                       transition={{ duration: 0.5 }}
                       className="mb-6"
                    >
-                     <h3 className="text-lg font-bold text-slate-900 mb-4 inline-block w-full">
+                     <h3 className="flex items-center gap-2 text-lg font-bold text-slate-900 mb-4">
+                       {edu.logo && <img src={edu.logo} alt="" className="w-6 h-6 rounded object-contain" />}
                        {edu.school}
                      </h3>
                      

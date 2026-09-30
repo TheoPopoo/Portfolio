@@ -24,6 +24,7 @@ const MotionDiv = motion.div as any;
 const CV_FILENAMES: Record<CVVariant, string> = {
   'alternance-ipssi': 'Poletto_Theo_CV_Alternance_IPSSI.pdf',
   'alternance-eni': 'Poletto_Theo_CV_Alternance_ENI.pdf',
+  'alternance-openclassrooms': 'Poletto_Theo_CV_Alternance_OpenClassrooms.pdf',
   'cdi': 'Poletto_Theo_CV_CDI.pdf'
 };
 
@@ -223,7 +224,7 @@ export const Resume: React.FC<ResumeProps> = ({ data, variant }) => {
                   />
                 </a>
                 <a href={`https://poletto-theo.vercel.app/${variant}`} target="_blank" rel="noopener noreferrer" className="text-[10px] text-slate-600 hover:text-slate-900 font-medium tracking-wide">
-                  poletto-theo.vercel.app/{variant}
+                  poletto-theo.vercel.app
                 </a>
               </div>
 
@@ -363,7 +364,10 @@ export const Resume: React.FC<ResumeProps> = ({ data, variant }) => {
                 {data.education.map((edu, idx) => (
                   <div key={idx} className={`relative pl-4 border-l-2 border-primary-100 ${idx > 0 ? "mt-2" : ""}`}>
                     <div className="absolute -left-[7px] top-1 w-3 h-3 bg-primary-500 rounded-full ring-4 ring-white"></div>
-                    <h4 className="text-[11.5px] font-bold text-[#1f2937] uppercase tracking-wide mb-1">{edu.school}</h4>
+                    <h4 className="flex items-center gap-1.5 text-[11.5px] font-bold text-[#1f2937] uppercase tracking-wide mb-1">
+                      {edu.logo && <img src={edu.logo} alt="" className="w-4 h-4 rounded object-contain" />}
+                      {edu.school}
+                    </h4>
                     {edu.degrees.map((deg, i) => (
                       <div key={i} className={`flex justify-between items-baseline ${i === 0 ? "mt-1" : "mt-0.5"}`}>
                         <div className="w-[80%] pr-2">

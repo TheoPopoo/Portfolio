@@ -3,6 +3,7 @@ import puppeteer from 'puppeteer';
 const VARIANTS = [
   { path: 'alternance-ipssi', filename: 'Poletto_Theo_CV_Alternance_IPSSI.pdf' },
   { path: 'alternance-eni', filename: 'Poletto_Theo_CV_Alternance_ENI.pdf' },
+  { path: 'alternance-openclassrooms', filename: 'Poletto_Theo_CV_Alternance_OpenClassrooms.pdf' },
   { path: 'cdi', filename: 'Poletto_Theo_CV_CDI.pdf' }
 ];
 

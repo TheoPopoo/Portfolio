@@ -15,6 +15,7 @@ const DEFAULT_VARIANT: CVVariant = 'alternance-ipssi';
 const PAGE_TITLES: Record<CVVariant, string> = {
   'alternance-ipssi': "Theo Poletto | Administrateur Systèmes & Réseaux",
   'alternance-eni': "Theo Poletto | Administrateur Systèmes & Réseaux",
+  'alternance-openclassrooms': "Theo Poletto | Administrateur Systèmes & Réseaux",
   'cdi': "Theo Poletto | Administrateur Systèmes & Réseaux (CDI)"
 };
 

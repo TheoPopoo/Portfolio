@@ -25,6 +25,7 @@ export interface Degree {
 
 export interface Education {
   school: string;
+  logo?: string;
   degrees: Degree[];
 }
 
