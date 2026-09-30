@@ -10,7 +10,7 @@ import { Timeline } from './components/Timeline';
 import { Footer } from './components/Footer';
 import { Resume } from './components/Resume.tsx';
 
-const DEFAULT_VARIANT: CVVariant = 'alternance-ipssi';
+const DEFAULT_VARIANT: CVVariant = 'alternance-openclassrooms';
 
 const PAGE_TITLES: Record<CVVariant, string> = {
   'alternance-ipssi': "Theo Poletto | Administrateur Systèmes & Réseaux",
