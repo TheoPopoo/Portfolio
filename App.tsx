@@ -10,7 +10,11 @@ import { Timeline } from './components/Timeline';
 import { Footer } from './components/Footer';
 import { Resume } from './components/Resume.tsx';
 
-const DEFAULT_VARIANT: CVVariant = 'alternance-openclassrooms';
+const DEFAULT_VARIANT: CVVariant = 'alternance-eni';
+
+const FOOTER_MESSAGES: Partial<Record<CVVariant, string>> = {
+  'alternance-eni': "Je recherche actuellement une alternance en administration systèmes et réseaux pour la rentrée 2027. N'hésitez pas à me contacter pour discuter de la façon dont je peux contribuer à votre équipe."
+};
 
 const PAGE_TITLES: Record<CVVariant, string> = {
   'alternance-ipssi': "Theo Poletto | Administrateur Systèmes & Réseaux",
@@ -62,7 +66,7 @@ const App: React.FC = () => {
         />
         <Resume data={portfolioData} variant={variant} />
       </main>
-      <Footer contact={portfolioData.contact} />
+      <Footer contact={portfolioData.contact} message={FOOTER_MESSAGES[variant]} />
       <Analytics />
     </div>
   );

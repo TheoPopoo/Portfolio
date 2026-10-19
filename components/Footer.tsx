@@ -4,9 +4,12 @@ import { Contact } from '../types';
 
 interface FooterProps {
   contact: Contact;
+  message?: string;
 }
 
-export const Footer: React.FC<FooterProps> = ({ contact }) => {
+const DEFAULT_MESSAGE = "Je recherche actuellement une alternance en cybersécurité pour la rentrée 2027. N'hésitez pas à me contacter pour discuter de la façon dont je peux contribuer à votre équipe.";
+
+export const Footer: React.FC<FooterProps> = ({ contact, message = DEFAULT_MESSAGE }) => {
   // Helper to extract clean URL from markdown format if present
   const extractUrl = (str: string) => {
     const match = str.match(/\((.*?)\)/);
@@ -21,7 +24,7 @@ export const Footer: React.FC<FooterProps> = ({ contact }) => {
           <div>
             <h2 className="text-3xl font-bold mb-6">Parlons de mon projet</h2>
             <p className="text-slate-400 mb-8 max-w-md text-lg">
-              Je recherche actuellement une alternance en cybersécurité pour la rentrée 2027. N'hésitez pas à me contacter pour discuter de la façon dont je peux contribuer à votre équipe.
+              {message}
             </p>
             
             <div className="space-y-4">
