@@ -269,8 +269,8 @@ const alternanceEniData: PortfolioData = {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
     status: "Recherche alternance Mastère Expert en Sécurité Digitale, ENI École Informatique, rentrée 2027",
-    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers le titre Mastère Expert en Sécurité Digitale à l'ENI École Informatique (rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
-    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via la formation Mastère Expert en Sécurité Digitale en alternance à l'ENI École Informatique (rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    objective: "En alternance chez Afludia jusqu'en janvier 2027 (Bac+3), je vais poursuivre avec le Mastère Expert en Sécurité Digitale de l'ENI École Informatique à la rentrée 2027. Je cherche maintenant une entreprise pour faire ce Mastère en alternance. La cybersécurité m'intéresse dans son ensemble, que ce soit le SOC, la sécurité opérationnelle ou la gouvernance.",
+    description: "En alternance chez Afludia (Bac+3), je continue vers la cybersécurité avec le Mastère Expert en Sécurité Digitale de l'ENI École Informatique, en alternance à partir de la rentrée 2027. Au quotidien, je m'occupe des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
   education: alternanceEducation("ENI École Informatique", "/assets/image/schools/eni.png", "Mastère Expert en Sécurité Digitale", "Alternance : 2 à 3 semaines de cours et 4 à 7 semaines en entreprise.")
