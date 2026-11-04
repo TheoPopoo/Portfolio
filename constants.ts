@@ -256,8 +256,8 @@ const alternanceIpssiData: PortfolioData = {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
     status: "Recherche alternance Cybersécurité (Bac+5), Mastère IPSSI, rentrée 2027",
-    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Mastère Cybersécurité à l'IPSSI (Bac+5, rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
-    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via un Mastère en alternance à l'IPSSI (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    objective: "En alternance chez Afludia jusqu'en janvier 2027 (Bac+3), je vais poursuivre avec le Mastère Cybersécurité de l'IPSSI (Bac+5) à la rentrée 2027. Je cherche dès maintenant une entreprise pour faire ce Mastère en alternance. Je m'intéresse surtout au pentest et au SOC.",
+    description: "En alternance chez Afludia (Bac+3), je continue vers la cybersécurité avec le Mastère Cybersécurité de l'IPSSI (Bac+5), en alternance à partir de la rentrée 2027. Au quotidien, je m'occupe des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
   education: alternanceEducation("IPSSI", "/assets/image/schools/ipssi.png", "Mastère Cybersécurité (Bac+5)")
@@ -269,7 +269,7 @@ const alternanceEniData: PortfolioData = {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
     status: "Recherche alternance Mastère Expert en Sécurité Digitale, ENI École Informatique, rentrée 2027",
-    objective: "En alternance chez Afludia jusqu'en janvier 2027 (Bac+3), je vais poursuivre avec le Mastère Expert en Sécurité Digitale de l'ENI École Informatique à la rentrée 2027. Je cherche maintenant une entreprise pour faire ce Mastère en alternance. La cybersécurité m'intéresse dans son ensemble, que ce soit le SOC, la sécurité opérationnelle ou la gouvernance.",
+    objective: "En alternance chez Afludia jusqu'en janvier 2027 (Bac+3), je vais poursuivre avec le Mastère Expert en Sécurité Digitale de l'ENI École Informatique à la rentrée 2027. Je cherche dès maintenant une entreprise pour faire ce Mastère en alternance. Je m'intéresse surtout au pentest et au SOC.",
     description: "En alternance chez Afludia (Bac+3), je continue vers la cybersécurité avec le Mastère Expert en Sécurité Digitale de l'ENI École Informatique, en alternance à partir de la rentrée 2027. Au quotidien, je m'occupe des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
@@ -282,8 +282,8 @@ const alternanceOpenClassroomsData: PortfolioData = {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
     status: "Recherche alternance Master Sécurité des Systèmes d'Information (Bac+5), OpenClassrooms, rentrée 2027",
-    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers un Master Sécurité des Systèmes d'Information chez OpenClassrooms (Bac+5, rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
-    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via un Master Sécurité des Systèmes d'Information en alternance chez OpenClassrooms (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    objective: "En alternance chez Afludia jusqu'en janvier 2027 (Bac+3), je vais poursuivre avec le Master Sécurité des Systèmes d'Information d'OpenClassrooms (Bac+5) à la rentrée 2027. Je cherche dès maintenant une entreprise pour faire ce Master en alternance. Je m'intéresse surtout au pentest et au SOC.",
+    description: "En alternance chez Afludia (Bac+3), je continue vers la cybersécurité avec le Master Sécurité des Systèmes d'Information d'OpenClassrooms (Bac+5), en alternance à partir de la rentrée 2027. Au quotidien, je m'occupe des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
   education: alternanceEducation("OpenClassrooms", "/assets/image/schools/openclassrooms.png", "Master Sécurité des Systèmes d'Information (Bac+5)")
@@ -295,8 +295,8 @@ const cdiData: PortfolioData = {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
     status: "Recherche un poste d'Administrateur Systèmes & Réseaux (CDI), disponible à partir de janvier 2027",
-    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je recherche un poste d'Administrateur Systèmes & Réseaux en CDI, disponible à partir de janvier 2027. J'aime la polyvalence entre l'administration systèmes, réseau et le développement d'outils internes.",
-    description: "Actuellement en alternance chez Afludia (Bac+3), je recherche un poste en CDI d'Administrateur Systèmes & Réseaux à partir de janvier 2027. Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    objective: "En alternance chez Afludia jusqu'en janvier 2027 (Bac+3), je cherche un poste d'Administrateur Systèmes & Réseaux en CDI à partir de cette date. J'aime pouvoir passer de l'administration systèmes et réseau au développement d'outils internes.",
+    description: "En alternance chez Afludia (Bac+3), je cherche un CDI d'Administrateur Systèmes & Réseaux à partir de janvier 2027. Au quotidien, je m'occupe des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
   education: livecampusAndLycee
