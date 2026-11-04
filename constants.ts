@@ -268,12 +268,12 @@ const alternanceEniData: PortfolioData = {
   personal: {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
-    status: "Recherche alternance Administrateur Système et Réseau (Bac+4), ENI École Informatique, rentrée 2027",
-    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers le titre Administrateur Système et Réseau à l'ENI École Informatique (Bac+4, rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
-    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études via une formation Administrateur Système et Réseau en alternance à l'ENI École Informatique (Bac+4, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    status: "Recherche alternance ESD Expert en Sécurité Digitale (Bac+5), ENI École Informatique, rentrée 2027",
+    objective: "Actuellement en alternance chez Afludia (Bac+3, fin de contrat en janvier 2027), je poursuis mon parcours vers le titre ESD Expert en Sécurité Digitale à l'ENI École Informatique (Bac+5, rentrée 2027). Ma priorité : trouver mon entreprise d'accueil en alternance. Je reste ouvert aux différents domaines du secteur (SOC, sécurité opérationnelle, gouvernance).",
+    description: "Actuellement en alternance chez Afludia (Bac+3), je poursuis mes études vers la cybersécurité via la formation ESD Expert en Sécurité Digitale en alternance à l'ENI École Informatique (Bac+5, rentrée 2027). Je gère des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
-  education: alternanceEducation("ENI École Informatique", "/assets/image/schools/eni.png", "Administrateur Système et Réseau (Bac+4)", "Alternance : 2 à 3 semaines de cours et 4 à 7 semaines en entreprise.")
+  education: alternanceEducation("ENI École Informatique", "/assets/image/schools/eni.png", "ESD Expert en Sécurité Digitale (Bac+5)", "Alternance : 2 à 3 semaines de cours et 4 à 7 semaines en entreprise.")
 };
 
 const alternanceOpenClassroomsData: PortfolioData = {
