@@ -124,7 +124,7 @@ const experience = [
     ]
   },
   {
-    position: "Administrateur Réseau et Systèmes (Alternance)",
+    position: "Administrateur Réseaux et Systèmes (Alternance)",
     company: "AFTRAL",
     period: "Octobre 2022 - Février 2023",
     description: "Alternance de 5 mois en administration réseau et systèmes.",
@@ -273,7 +273,7 @@ const alternanceEniData: PortfolioData = {
     description: "En alternance chez Afludia (Bac+3), je continue vers la cybersécurité avec le Mastère Expert en Sécurité Digitale de l'ENI École Informatique, en alternance à partir de la rentrée 2027. Au quotidien, je m'occupe des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
-  education: alternanceEducation("ENI École Informatique", "/assets/image/schools/eni.png", "Mastère Expert en Sécurité Digitale", "Alternance : 2 à 3 semaines de cours et 4 à 7 semaines en entreprise.")
+  education: alternanceEducation("ENI École Informatique", "/assets/image/schools/eni.png", "Mastère Expert en Sécurité Digitale", "Alternance : 1 à 2 semaines de cours et 4 à 6 semaines en entreprise.")
 };
 
 const alternanceOpenClassroomsData: PortfolioData = {

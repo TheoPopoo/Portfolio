@@ -91,7 +91,7 @@ Grâce à mon expérience en entreprise, je combine **administration système**,
 
 ---
 
-### Administrateur Réseau
+### Administrateur Réseaux
 
 **Aftral** · *Octobre 2022 – Février 2023*
 
