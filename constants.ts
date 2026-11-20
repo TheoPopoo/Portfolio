@@ -281,12 +281,12 @@ const alternanceOpenClassroomsData: PortfolioData = {
   personal: {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
-    status: "Recherche alternance Master Sécurité des Systèmes d'Information (Bac+5), OpenClassrooms, rentrée 2027",
-    objective: "En alternance chez Afludia jusqu'en janvier 2027 (Bac+3), je vais poursuivre avec le Master Sécurité des Systèmes d'Information d'OpenClassrooms (Bac+5) à la rentrée 2027. Je cherche dès maintenant une entreprise pour faire ce Master en alternance. Je m'intéresse surtout au pentest et au SOC.",
-    description: "En alternance chez Afludia (Bac+3), je continue vers la cybersécurité avec le Master Sécurité des Systèmes d'Information d'OpenClassrooms (Bac+5), en alternance à partir de la rentrée 2027. Au quotidien, je m'occupe des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    status: "Recherche alternance Master Sécurité des Systèmes d'Information (Bac+5, UTT), OpenClassrooms, rentrée 2027",
+    objective: "En alternance chez Afludia jusqu'en janvier 2027 (Bac+3), je vais poursuivre avec le Master Sécurité des Systèmes d'Information de l'UTT, préparé avec OpenClassrooms (Bac+5), à la rentrée 2027. Je cherche dès maintenant une entreprise pour faire ce Master en alternance sur 12 mois. Je m'intéresse surtout au pentest et au SOC.",
+    description: "En alternance chez Afludia (Bac+3), je continue vers la cybersécurité avec le Master Sécurité des Systèmes d'Information de l'UTT, préparé avec OpenClassrooms (Bac+5), en alternance à partir de la rentrée 2027. Au quotidien, je m'occupe des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
     avatar: "/assets/image/avatar.png"
   },
-  education: alternanceEducation("OpenClassrooms", "/assets/image/schools/openclassrooms.png", "Master Sécurité des Systèmes d'Information (Bac+5)")
+  education: alternanceEducation("OpenClassrooms", "/assets/image/schools/openclassrooms.png", "Master Sécurité des Systèmes d'Information (Bac+5, UTT)", "Alternance 12 mois : 4 jours en entreprise, 1 jour de formation par semaine.")
 };
 
 const cdiData: PortfolioData = {
