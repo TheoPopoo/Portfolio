@@ -295,8 +295,8 @@ const cdiData: PortfolioData = {
     name: "Theo Poletto",
     title: "Administrateur Systèmes & Réseaux",
     status: "Recherche un poste d'Administrateur Systèmes & Réseaux (CDI), disponible à partir de janvier 2027",
-    objective: "En alternance chez Afludia jusqu'en janvier 2027 (Bac+3), je cherche un poste d'Administrateur Systèmes & Réseaux en CDI à partir de cette date. J'aime pouvoir passer de l'administration systèmes et réseau au développement d'outils internes.",
-    description: "En alternance chez Afludia (Bac+3), je cherche un CDI d'Administrateur Systèmes & Réseaux à partir de janvier 2027. Au quotidien, je m'occupe des infrastructures, de la virtualisation et de la supervision, et je développe des outils internes en PowerShell, C# et Blazor.",
+    objective: "Administrateur systèmes et réseaux chez Afludia depuis 2024, je termine mon Bachelor (Bac+3) en janvier 2027 et je cherche un CDI à partir de cette date, à Nancy et alentours. J'administre au quotidien des environnements Windows et Linux, le réseau et la supervision, avec une vraie attention à la sécurité.",
+    description: "Administrateur systèmes et réseaux chez Afludia depuis 2024, je cherche un CDI à partir de janvier 2027, à la fin de mon Bachelor (Bac+3). Au quotidien, je m'occupe des infrastructures, de la virtualisation, de la supervision et de la sécurité des postes, et j'automatise les tâches récurrentes en PowerShell.",
     avatar: "/assets/image/avatar.png"
   },
   education: livecampusAndLycee
