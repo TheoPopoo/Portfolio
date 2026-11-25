@@ -71,8 +71,11 @@ export const AtsResume: React.FC<AtsResumeProps> = ({ data, variant }) => {
         >
           Imprimer
         </button>
-        <a href={`/${variant}`} className="ml-auto text-slate-600 underline hover:text-slate-900">
-          Voir le portfolio complet
+        <a
+          href={`/${variant}#resume`}
+          className="ml-auto rounded-md border border-slate-300 bg-white px-3 py-2 font-medium text-slate-800 hover:bg-slate-50"
+        >
+          Voir le CV visuel et le portfolio
         </a>
       </nav>
 

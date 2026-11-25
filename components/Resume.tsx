@@ -15,7 +15,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Mail, Phone, MapPin, Linkedin, ExternalLink, Award, Sparkles, Briefcase, GraduationCap, Target, Car, Waves, Footprints, Globe, Github, Loader } from 'lucide-react';
+import { Download, FileText, Mail, Phone, MapPin, Linkedin, ExternalLink, Award, Sparkles, Briefcase, GraduationCap, Target, Car, Waves, Footprints, Globe, Github, Loader } from 'lucide-react';
 import { PortfolioData } from '../types';
 import { CVVariant } from '../constants';
 
@@ -180,6 +180,14 @@ export const Resume: React.FC<ResumeProps> = ({ data, variant }) => {
               <span className="hidden md:inline">Télécharger mon CV</span>
               <span className="md:hidden">Télécharger</span>
             </button>
+            <a
+              href={`/ats/${variant}`}
+              className="inline-flex items-center px-6 py-3 bg-white text-slate-800 border border-slate-300 rounded-lg hover:bg-slate-50 transition-all font-medium text-sm md:text-base"
+            >
+              <FileText size={18} className="mr-2" />
+              <span className="hidden md:inline">Version ATS (texte)</span>
+              <span className="md:hidden">Version ATS</span>
+            </a>
           </div>
         </MotionDiv>
 
