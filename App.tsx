@@ -9,6 +9,7 @@ import { Projects } from './components/Projects';
 import { Timeline } from './components/Timeline';
 import { Footer } from './components/Footer';
 import { Resume } from './components/Resume.tsx';
+import { AtsResume } from './components/AtsResume';
 
 const DEFAULT_VARIANT: CVVariant = 'alternance-eni';
 
@@ -27,21 +28,28 @@ function getPathVariant(): string {
   return window.location.pathname.replace(/^\/+|\/+$/g, '');
 }
 
+// /ats -> CV ATS de la variante par défaut ; /ats/<variante> -> CV ATS de cette variante.
+function parsePath(path: string): { isAts: boolean; variantPath: string } {
+  if (path === 'ats') return { isAts: true, variantPath: DEFAULT_VARIANT };
+  if (path.startsWith('ats/')) return { isAts: true, variantPath: path.slice(4) };
+  return { isAts: false, variantPath: path };
+}
+
 const App: React.FC = () => {
-  const path = getPathVariant();
-  const isKnownVariant = (CV_VARIANTS as string[]).includes(path);
+  const { isAts, variantPath } = parsePath(getPathVariant());
+  const isKnownVariant = (CV_VARIANTS as string[]).includes(variantPath);
 
   useEffect(() => {
     if (!isKnownVariant) {
-      window.location.replace(`/${DEFAULT_VARIANT}`);
+      window.location.replace(isAts ? '/ats' : `/${DEFAULT_VARIANT}`);
     }
-  }, [isKnownVariant]);
+  }, [isKnownVariant, isAts]);
 
-  const variant = (isKnownVariant ? path : DEFAULT_VARIANT) as CVVariant;
+  const variant = (isKnownVariant ? variantPath : DEFAULT_VARIANT) as CVVariant;
 
   useEffect(() => {
-    document.title = PAGE_TITLES[variant];
-  }, [variant]);
+    document.title = isAts ? `CV ATS | ${PAGE_TITLES[variant]}` : PAGE_TITLES[variant];
+  }, [variant, isAts]);
 
   if (!isKnownVariant) {
     // Redirection en cours vers la variante par défaut, on n'affiche rien entre-temps.
@@ -49,6 +57,15 @@ const App: React.FC = () => {
   }
 
   const portfolioData = portfolioDataByVariant[variant];
+
+  if (isAts) {
+    return (
+      <>
+        <AtsResume data={portfolioData} variant={variant} />
+        <Analytics />
+      </>
+    );
+  }
 
   return (
     <div className="min-h-screen">

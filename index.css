@@ -35,4 +35,45 @@
     margin: 0 !important;
     padding: 0 !important;
   }
+
+  /* --- CV ATS (/ats) : texte sur plusieurs pages A4, avec marges --- */
+  @page ats {
+    size: A4 portrait;
+    margin: 12mm 14mm;
+  }
+
+  html:has(.ats-root),
+  body:has(.ats-root) {
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  .ats-root {
+    page: ats;
+    min-height: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  .ats-no-print {
+    display: none !important;
+  }
+
+  .ats-sheet {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .ats-entry {
+    break-inside: avoid;
+  }
+
+  .ats-section h2 {
+    break-after: avoid;
+  }
 }
